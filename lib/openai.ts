@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-import { zodResponseFormat } from "openai/helpers/zod";
+
 import { ChatResponseSchema, ChatResponse } from "./schema";
 import { getSystemPrompt } from "./systemPrompt";
 
@@ -20,6 +20,47 @@ export type RetrievedChunk = {
   sectionHeading: string;
   content: string;
   url?: string;
+};
+
+const NutritionResponseSchema = {
+  type: "object",
+  properties: {
+    answer: {
+      type: "string",
+      description: "The full answer text"
+    },
+    claims: {
+      type: "array",
+      description: "List of claims with per-claim citations",
+      items: {
+        type: "object",
+        properties: {
+          claim: {
+            type: "string",
+            description: "A single factual claim made in the answer"
+          },
+          source: {
+            type: ["object", "null"],
+            description: "Citation source — null if uncitable",
+            properties: {
+              documentTitle: { type: "string", description: "Title of the source document" },
+              publisher: { type: "string", description: "Publishing authority" },
+              year: { type: "integer", description: "Publication year" },
+              url: { type: "string", description: "Source URL" },
+              sectionHeading: { type: "string", description: "Section within the document" },
+              snippet: { type: "string", description: "Relevant excerpt from the chunk" }
+            },
+            required: ["documentTitle", "publisher", "year", "url", "sectionHeading", "snippet"],
+            additionalProperties: false
+          }
+        },
+        required: ["claim", "source"],
+        additionalProperties: false
+      }
+    }
+  },
+  required: ["answer", "claims"],
+  additionalProperties: false
 };
 
 export async function getChatCompletion(
@@ -46,19 +87,25 @@ ${c.content}`
     content: getSystemPrompt(chunksText),
   };
 
-  const response = await openai.chat.completions.parse({
+  const response = await openai.chat.completions.create({
     model: "openai/gpt-oss-120b",
     messages: [systemMessage, ...messages],
-    response_format: zodResponseFormat(ChatResponseSchema, "chat_response"),
+    response_format: {
+      type: "json_schema",
+      json_schema: {
+        name: "nutrition_response",
+        strict: true,
+        schema: NutritionResponseSchema
+      }
+    },
     temperature: 0,
   });
 
-  const parsed = response.choices[0]?.message?.parsed;
-
-  if (!parsed) {
-    throw new Error("OpenAI failed to return parsed JSON");
+  const content = response.choices[0]?.message?.content;
+  if (!content) {
+    throw new Error("OpenAI failed to return content");
   }
 
-  // Parse through our local zod schema to ensure exact compliance and hard fail
+  const parsed = JSON.parse(content);
   return ChatResponseSchema.parse(parsed);
 }
