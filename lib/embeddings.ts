@@ -1,7 +1,7 @@
 import { OpenAI } from 'openai';
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY || "mock-key",
 });
 
 // Mock generator for when user supplies a Groq key instead of OpenAI
@@ -10,7 +10,7 @@ function getMockEmbedding(dimensions: number): number[] {
 }
 
 export async function generateEmbedding(text: string): Promise<number[]> {
-  if (process.env.OPENAI_API_KEY?.startsWith('gsk_')) {
+  if (!process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY.startsWith('gsk_') || process.env.GROQ_API_KEY) {
     return getMockEmbedding(1536);
   }
 
@@ -29,7 +29,7 @@ export async function generateEmbedding(text: string): Promise<number[]> {
 }
 
 export async function generateEmbeddings(texts: string[]): Promise<number[][]> {
-  if (process.env.OPENAI_API_KEY?.startsWith('gsk_')) {
+  if (!process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY.startsWith('gsk_') || process.env.GROQ_API_KEY) {
     return texts.map(() => getMockEmbedding(1536));
   }
 

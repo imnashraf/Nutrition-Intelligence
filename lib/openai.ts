@@ -5,7 +5,7 @@ import { getSystemPrompt } from "./systemPrompt";
 
 const openai = new OpenAI({
   baseURL: "https://api.groq.com/openai/v1",
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.GROQ_API_KEY || process.env.OPENAI_API_KEY,
 });
 
 export type Message = {
@@ -47,7 +47,7 @@ ${c.content}`
   };
 
   const response = await openai.chat.completions.parse({
-    model: "openai/gpt-oss-120b",
+    model: "llama3-70b-8192",
     messages: [systemMessage, ...messages],
     response_format: zodResponseFormat(ChatResponseSchema, "chat_response"),
     temperature: 0,
