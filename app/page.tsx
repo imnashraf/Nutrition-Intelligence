@@ -38,10 +38,14 @@ export default function ChatPage() {
         }),
       });
 
-      const data = await res.json();
-      
+      let data: any = null;
+      const contentType = res.headers.get("content-type");
+      if (contentType && contentType.includes("application/json")) {
+        data = await res.json();
+      }
+
       if (!res.ok) {
-        throw new Error(data.error || "Failed to fetch response");
+        throw new Error(data?.error || `API Error: ${res.status} ${res.statusText}`);
       }
 
       if (data.conversationId && !conversationId) {
