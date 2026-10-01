@@ -7,17 +7,17 @@ export const SourceSchema = z.object({
   url: z.string().describe("Source URL"),
   sectionHeading: z.string().describe("Section within the document"),
   snippet: z.string().describe("Relevant excerpt from the chunk"),
-});
+}).strict();
 
 export const ClaimSchema = z.object({
   claim: z.string().describe("A single factual claim made in the answer"),
   source: SourceSchema.describe("Citation source"),
-});
+}).strict();
 
 export const ChatResponseSchema = z.object({
   answer: z.string().describe("The full answer text"),
   claims: z.array(ClaimSchema).describe("List of claims with per-claim citations"),
-});
+}).strict();
 
 export const RefusalSchema = z.object({
   declined: z.literal(true),

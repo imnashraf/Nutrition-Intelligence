@@ -108,15 +108,24 @@ ${c.content}`
 
   let parsed: any;
   try {
-    parsed = JSON.parse(content);
+    let cleanContent = content.trim();
+    if (cleanContent.startsWith("```")) {
+      cleanContent = cleanContent.replace(/^```(?:json)?\n?/, "").replace(/\n?```$/, "").trim();
+    }
+    parsed = JSON.parse(cleanContent);
+    
+    // Handle Groq potentially wrapping the response in the schema name
+    if (parsed && typeof parsed === "object" && !parsed.answer && parsed.nutrition_response) {
+      parsed = parsed.nutrition_response;
+    }
   } catch (e: any) {
-    console.error("Failed to parse JSON content:", content);
+    console.error("Failed to parse JSON content from LLM"); // Redacted content
     throw new Error("Failed to parse JSON content: " + e.message);
   }
 
   const schemaResult = ChatResponseSchema.safeParse(parsed);
   if (!schemaResult.success) {
-    console.error("Zod validation failed. Received JSON:", JSON.stringify(parsed, null, 2));
+    console.error("Zod validation failed. See issues below."); // Redacted parsed
     console.error("Zod issues:", JSON.stringify(schemaResult.error.issues, null, 2));
     throw new Error("Zod validation failed: " + JSON.stringify(schemaResult.error.issues));
   }
