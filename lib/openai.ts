@@ -40,8 +40,8 @@ const NutritionResponseSchema = {
             description: "A single factual claim made in the answer"
           },
           source: {
-            type: ["object", "null"],
-            description: "Citation source — null if uncitable",
+            type: "object",
+            description: "Citation source",
             properties: {
               documentTitle: { type: "string", description: "Title of the source document" },
               publisher: { type: "string", description: "Publishing authority" },
@@ -106,6 +106,20 @@ ${c.content}`
     throw new Error("OpenAI failed to return content");
   }
 
-  const parsed = JSON.parse(content);
-  return ChatResponseSchema.parse(parsed);
+  let parsed: any;
+  try {
+    parsed = JSON.parse(content);
+  } catch (e: any) {
+    console.error("Failed to parse JSON content:", content);
+    throw new Error("Failed to parse JSON content: " + e.message);
+  }
+
+  const schemaResult = ChatResponseSchema.safeParse(parsed);
+  if (!schemaResult.success) {
+    console.error("Zod validation failed. Received JSON:", JSON.stringify(parsed, null, 2));
+    console.error("Zod issues:", JSON.stringify(schemaResult.error.issues, null, 2));
+    throw new Error("Zod validation failed: " + JSON.stringify(schemaResult.error.issues));
+  }
+
+  return schemaResult.data;
 }

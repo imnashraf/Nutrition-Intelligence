@@ -44,7 +44,7 @@ async function runTests() {
   const goodResponse: ChatResponse = {
     answer: "Raw chicken should be stored at or below 40 degrees Fahrenheit.",
     claims: [
-      { claim: "Store at 40 degrees", source: null }
+      { claim: "Store at 40 degrees", source: { documentTitle: "Test", publisher: "Test", year: 2024, url: "test", sectionHeading: "Test", snippet: "Test" } }
     ]
   };
   

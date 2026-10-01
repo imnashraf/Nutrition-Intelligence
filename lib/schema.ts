@@ -11,7 +11,7 @@ export const SourceSchema = z.object({
 
 export const ClaimSchema = z.object({
   claim: z.string().describe("A single factual claim made in the answer"),
-  source: z.union([z.null(), SourceSchema]).describe("Citation source — null if uncitable"),
+  source: SourceSchema.describe("Citation source"),
 });
 
 export const ChatResponseSchema = z.object({
