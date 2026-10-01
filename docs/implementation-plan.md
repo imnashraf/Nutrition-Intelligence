@@ -52,7 +52,7 @@ gantt
 | 1.3 | Install database dependencies: `pg`, `@types/pg`                     | `package.json`                   |
 | 1.4 | Install RAG dependencies: `pdf-parse`, `@pinecone-database/pinecone` | `package.json`                   |
 | 1.5 | Install dev dependencies: `tsx`, `@types/uuid`                       | `package.json`                   |
-| 1.6 | Create `.env.local` with all keys: `OPENAI_API_KEY`, `DATABASE_URL`, `PINECONE_API_KEY`, `PINECONE_INDEX` | `.env.local` |
+| 1.6 | Create `.env.local` with all keys: `GROQ_API_KEY`, `DATABASE_URL`, `PINECONE_API_KEY`, `PINECONE_INDEX` | `.env.local` |
 | 1.7 | Update `.gitignore` — add `.env.local`, `node_modules`, `corpus/chunks/` | `.gitignore`                 |
 | 1.8 | Create folder structure: `lib/`, `components/`, `db/migrations/`, `scripts/`, `docs/`, `corpus/documents/`, `corpus/chunks/` | — |
 | 1.9 | Verify `npm run dev` starts successfully on `localhost:3000`          | —                                |
@@ -411,8 +411,8 @@ type Chunk = {
 
 | Property      | Value                      |
 |---------------|----------------------------|
-| Model         | `text-embedding-3-small`   |
-| Dimensions    | 1536                       |
+| Model         | `Xenova/all-MiniLM-L6-v2`   |
+| Dimensions    | 384                       |
 | Max input     | 8191 tokens                |
 | Cost          | ~$0.02 per 1M tokens       |
 
@@ -674,7 +674,7 @@ sequenceDiagram
     else In scope
         A->>DB: Save user message
         A->>EMB: Embed query
-        EMB-->>A: Query vector [1536 dims]
+        EMB-->>A: Query vector [384 dims]
         A->>VDB: Similarity search (top-k)
         VDB-->>A: Ranked chunks with metadata
         A->>CG: Relevance check
@@ -978,7 +978,7 @@ Diff the report against the previous committed version before merging.
 |-------|----------------------------------------------------------------------------|---------------------------------------|
 | 13B.1 | Push to GitHub repository                                                  | Verify `.env.local` is not committed |
 | 13B.2 | Connect repo to Vercel                                                     | Import project, auto-detect Next.js   |
-| 13B.3 | Set all environment variables in Vercel: `OPENAI_API_KEY`, `DATABASE_URL`, `PINECONE_API_KEY`, `PINECONE_INDEX` | Settings → Environment Variables |
+| 13B.3 | Set all environment variables in Vercel: `GROQ_API_KEY`, `DATABASE_URL`, `PINECONE_API_KEY`, `PINECONE_INDEX` | Settings → Environment Variables |
 | 13B.4 | Verify Postgres and Vector DB are accessible from Vercel                   | Test connection from deployed app     |
 | 13B.5 | Run ingestion pipeline against production vector DB                        | `npx tsx scripts/ingest.ts`           |
 | 13B.6 | Run validation script against production                                   | `npx tsx scripts/validateCorpus.ts`   |
@@ -1096,7 +1096,7 @@ graph TD
 
 | Variable           | Where                   | Description                 |
 |--------------------|-------------------------|-----------------------------|
-| `OPENAI_API_KEY`   | `.env.local` / Vercel   | Chat + embedding API key    |
+| `GROQ_API_KEY`   | `.env.local` / Vercel   | Groq LLM API key    |
 | `DATABASE_URL`     | `.env.local` / Vercel   | Postgres connection string  |
 | `PINECONE_API_KEY` | `.env.local` / Vercel   | Vector DB access            |
 | `PINECONE_INDEX`   | `.env.local` / Vercel   | Vector DB index name        |

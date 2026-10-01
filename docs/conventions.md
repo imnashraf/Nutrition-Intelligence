@@ -298,7 +298,7 @@ All errors follow a consistent shape:
 
 | Variable | Required | Where set | Notes |
 |----------|----------|-----------|-------|
-| `OPENAI_API_KEY` | Yes | `.env.local` / Vercel dashboard | Chat + embedding API key |
+| `GROQ_API_KEY` | Yes | `.env.local` / Vercel dashboard | Groq LLM API key |
 | `DATABASE_URL` | Yes | `.env.local` / Vercel dashboard | Postgres connection string |
 | `PINECONE_API_KEY` | Yes | `.env.local` / Vercel dashboard | Vector DB access |
 | `PINECONE_INDEX` | Yes | `.env.local` / Vercel dashboard | Vector DB index name |
@@ -427,7 +427,7 @@ Run before every deployment:
 | Send a calorie/weight question | Declined response (`out_of_scope`) with redirect message |
 | Send two messages in same conversation | Context is maintained |
 | Open on mobile viewport | Sources panel stacks below chat |
-| Check browser Network tab | No `OPENAI_API_KEY` in any request |
+| Check browser Network tab | No `GROQ_API_KEY` in any request |
 
 ---
 
@@ -443,7 +443,7 @@ Run before every deployment:
 | `next` | Framework (frontend + API routes) |
 | `react` / `react-dom` | UI rendering |
 | `zod` | Schema validation (structured output parsing) |
-| `openai` | OpenAI API client |
+| `openai` | OpenAI SDK (used as Groq client) |
 | `pg` | Postgres driver for database operations |
 | `@pinecone-database/pinecone` | Vector database client |
 | `pdf-parse` | Text extraction for ingestion pipeline |

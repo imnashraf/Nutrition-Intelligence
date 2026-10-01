@@ -10,8 +10,8 @@
 |---|---|---|
 | **Frontend** | Next.js (App Router) | Full-stack in one repo; API routes live alongside pages; deploys to Vercel in one step. |
 | **Backend / API** | Next.js Route Handlers (`app/api/`) | Model calls stay server-side (never exposed to the browser). No second service to deploy. |
-| **LLM Provider** | OpenAI API | Native JSON-mode / structured outputs via `response_format`. Reduces parsing risk. |
-| **Embedding Model** | OpenAI `text-embedding-3-small` | Same provider as chat model. 1536 dimensions. Low cost per token. |
+| **LLM Provider** | Groq (llama3-70b-8192) | Native JSON-mode / structured outputs via `response_format`. Reduces parsing risk. |
+| **Embedding Model** | Local Transformers (`Xenova/all-MiniLM-L6-v2`) | Server-side local embeddings (384 dimensions). Free and secure. |
 | **Database** | Postgres (Supabase or Railway) | Stores conversation history, document metadata, raw chunks, and citation data. |
 | **Vector Database** | Pinecone or ChromaDB | Stores document chunk embeddings. Supports filtered retrieval by document name. |
 | **PDF Processing** | `pdf-parse` + custom section splitter | Extracts text from public guidance PDFs while preserving section structure. |
@@ -98,7 +98,7 @@ sequenceDiagram
     participant EMB as Embedding API
     participant VDB as Vector Database
     participant CG as Corpus Guard
-    participant LLM as OpenAI API
+    participant LLM as Groq
     participant DB as Postgres
 
     U->>F: Types question, hits Send
@@ -112,7 +112,7 @@ sequenceDiagram
         SG-->>A: PASS
         A->>DB: Save user message
         A->>EMB: Embed the user query
-        EMB-->>A: Query vector [1536 dims]
+        EMB-->>A: Query vector [384 dims]
         A->>VDB: Similarity search (top-k chunks)
         VDB-->>A: Ranked chunks with metadata
         A->>CG: Are the retrieved chunks relevant enough?
@@ -842,7 +842,7 @@ graph LR
 
 | Variable | Where | Description |
 |---|---|---|
-| `OPENAI_API_KEY` | `.env.local` / Vercel | Chat + embedding API key |
+| `GROQ_API_KEY` | `.env.local` / Vercel | Groq LLM API key |
 | `DATABASE_URL` | `.env.local` / Vercel | Postgres connection string |
 | `PINECONE_API_KEY` | `.env.local` / Vercel | Vector DB access |
 | `PINECONE_INDEX` | `.env.local` / Vercel | Vector DB index name |

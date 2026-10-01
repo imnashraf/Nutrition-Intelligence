@@ -15,12 +15,15 @@ async function main() {
   const exists = indexes?.some(idx => idx.name === indexName);
   
   if (exists) {
-    console.log(`✅ Index "${indexName}" already exists.`);
-  } else {
-    console.log(`⏳ Creating index "${indexName}"... This may take a moment.`);
+    console.log(`🗑️ Deleting existing index "${indexName}"...`);
+    await pc.deleteIndex(indexName);
+    console.log(`✅ Index "${indexName}" deleted.`);
+  }
+
+  console.log(`⏳ Creating index "${indexName}"... This may take a moment.`);
     await pc.createIndex({
       name: indexName,
-      dimension: 1536, // text-embedding-3-small dimension
+      dimension: 384, // Xenova/all-MiniLM-L6-v2 dimension
       metric: 'cosine',
       spec: {
         serverless: {
@@ -30,7 +33,6 @@ async function main() {
       }
     });
     console.log(`✅ Index "${indexName}" created successfully!`);
-  }
 }
 
 main().catch(err => {

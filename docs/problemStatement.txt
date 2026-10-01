@@ -107,12 +107,12 @@ Tools You Can Use
 Area	Tools
 Frontend and Backend	Next.js or React with FastAPI
 Scaffolding	Cursor or Anti-gravity
-Model	Anthropic or OpenAI API
+Model	Groq (llama3-70b-8192)
 Storage	Supabase or Postgres. SQLite is fine too
 Deployment	Vercel or Railway
 Model Requirements
 
-Both Anthropic and OpenAI have structured output modes. Use structured outputs rather than parsing prose yourself.
+Both Anthropic, OpenAI, and Groq have structured output modes. Use structured outputs rather than parsing prose yourself.
 
 Rules
 

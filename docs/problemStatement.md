@@ -182,9 +182,7 @@ Group the failures and count them.
 | Area                  | Tools                                    |
 |-----------------------|------------------------------------------|
 | Frontend and Backend  | Next.js or React with FastAPI            |
-| Scaffolding           | Cursor or Antigravity                    |
-| Model                 | Anthropic or OpenAI API                  |
-| Storage               | Supabase or Postgres                     |
+| Model                 | Groq (llama3-70b-8192)                   |
 | Vector Database       | Pinecone or ChromaDB                     |
 | PDF Processing        | pdf-parse + custom section splitter      |
 | Deployment            | Vercel or Railway                        |

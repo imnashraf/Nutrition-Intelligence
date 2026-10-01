@@ -15,8 +15,7 @@ A RAG-powered nutrition and food safety assistant built with Next.js, Postgres, 
 - **Framework:** Next.js (App Router)
 - **Database:** PostgreSQL (with `pg` driver) for conversation and metadata storage
 - **Vector DB:** Pinecone for similarity search
-- **LLM:** Groq (llama3-70b-8192) for high-speed generation
-- **Embeddings:** OpenAI (`text-embedding-3-small`)
+- **LLM & Embeddings:** Groq (llama3-70b-8192) for high-speed generation (embeddings are mock-only via Groq for this project context)
 
 ## Setup Instructions
 
@@ -32,9 +31,8 @@ A RAG-powered nutrition and food safety assistant built with Next.js, Postgres, 
    Create a `.env.local` file in the root directory and add:
 
    ```env
-   # LLM & Embeddings
+   # LLM
    GROQ_API_KEY=your_groq_api_key
-   OPENAI_API_KEY=your_openai_api_key
    
    # Pinecone Vector DB
    PINECONE_API_KEY=your_pinecone_api_key

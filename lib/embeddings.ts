@@ -1,27 +1,23 @@
-import { OpenAI } from 'openai';
+import { pipeline } from '@xenova/transformers';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY || "mock-key",
-});
+class EmbeddingsPipeline {
+  static task = 'feature-extraction' as const;
+  static model = 'Xenova/all-MiniLM-L6-v2';
+  static instance: any = null;
 
-// Mock generator for when user supplies a Groq key instead of OpenAI
-function getMockEmbedding(dimensions: number): number[] {
-  return Array.from({ length: dimensions }, () => Math.random() * 2 - 1);
+  static async getInstance() {
+    if (this.instance === null) {
+      this.instance = await pipeline(this.task, this.model);
+    }
+    return this.instance;
+  }
 }
 
 export async function generateEmbedding(text: string): Promise<number[]> {
-  if (!process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY.startsWith('gsk_') || process.env.GROQ_API_KEY) {
-    return getMockEmbedding(1536);
-  }
-
   try {
-    const response = await openai.embeddings.create({
-      model: 'text-embedding-3-small',
-      input: text,
-      dimensions: 1536,
-    });
-    
-    return response.data[0].embedding;
+    const embedder = await EmbeddingsPipeline.getInstance();
+    const result = await embedder(text, { pooling: 'mean', normalize: true });
+    return Array.from(result.data);
   } catch (error) {
     console.error('Error generating embedding:', error);
     throw error;
@@ -29,18 +25,17 @@ export async function generateEmbedding(text: string): Promise<number[]> {
 }
 
 export async function generateEmbeddings(texts: string[]): Promise<number[][]> {
-  if (!process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY.startsWith('gsk_') || process.env.GROQ_API_KEY) {
-    return texts.map(() => getMockEmbedding(1536));
-  }
-
   try {
-    const response = await openai.embeddings.create({
-      model: 'text-embedding-3-small',
-      input: texts,
-      dimensions: 1536,
-    });
+    const embedder = await EmbeddingsPipeline.getInstance();
+    const result = await embedder(texts, { pooling: 'mean', normalize: true });
     
-    return response.data.map(d => d.embedding);
+    // result.data is a flat Float32Array, we need to split it by dimension (384)
+    const dimensions = 384;
+    const embeddings: number[][] = [];
+    for (let i = 0; i < texts.length; i++) {
+      embeddings.push(Array.from(result.data.slice(i * dimensions, (i + 1) * dimensions)));
+    }
+    return embeddings;
   } catch (error) {
     console.error('Error generating batch embeddings:', error);
     throw error;

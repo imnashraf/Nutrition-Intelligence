@@ -7,11 +7,10 @@ export type CorpusResult =
 const NOT_IN_CORPUS_MESSAGE =
   "The dietary guidance documents I have access to don't cover this topic.";
 
-const IS_MOCK_ENV = process.env.OPENAI_API_KEY?.startsWith('gsk_');
-const SIMILARITY_THRESHOLD = IS_MOCK_ENV ? -2 : 0.72;
-const BARELY_RELEVANT_TOP = IS_MOCK_ENV ? -2 : 0.75;
-const BARELY_RELEVANT_NEXT = IS_MOCK_ENV ? -2 : 0.70;
-const HIGH_SCORE_THRESHOLD = IS_MOCK_ENV ? -2 : 0.78;
+const SIMILARITY_THRESHOLD = 0.72;
+const BARELY_RELEVANT_TOP = 0.75;
+const BARELY_RELEVANT_NEXT = 0.70;
+const HIGH_SCORE_THRESHOLD = 0.78;
 
 export function checkRetrievalRelevance(
   query: string,

@@ -18,7 +18,7 @@ const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
 });
 
-const SIMILARITY_THRESHOLD = process.env.OPENAI_API_KEY?.startsWith('gsk_') ? -2 : 0.72;
+const SIMILARITY_THRESHOLD = 0.72;
 
 export async function retrieveChunks(
   query: string,
