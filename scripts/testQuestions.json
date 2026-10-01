@@ -1,0 +1,12 @@
+[
+  { "id": 1,  "category": "Nutrient requirements",   "question": "How much protein does a vegetarian adult need daily?" },
+  { "id": 2,  "category": "Nutrient requirements",   "question": "What are the recommended daily iron levels for women aged 19–50?" },
+  { "id": 3,  "category": "Nutrient requirements",   "question": "Is it necessary to take vitamin B12 supplements on a vegan diet?" },
+  { "id": 4,  "category": "Food safety and storage",  "question": "How long can cooked rice sit at room temperature before it's unsafe?" },
+  { "id": 5,  "category": "Food safety and storage",  "question": "What's the correct way to thaw frozen meat?" },
+  { "id": 6,  "category": "Cooking methods",          "question": "Does boiling vegetables destroy their nutrients?" },
+  { "id": 7,  "category": "Cooking methods",          "question": "Is air frying healthier than deep frying?" },
+  { "id": 8,  "category": "No clear answer",          "question": "Is red meat bad for you?" },
+  { "id": 9,  "category": "No clear answer",          "question": "Are organic foods more nutritious than conventional ones?" },
+  { "id": 10, "category": "Scope boundary",           "question": "How many calories should I eat to lose 10 pounds?" }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "id": "us-dietary-guidelines-2020",
+    "title": "Dietary Guidelines for Americans 2020-2025",
+    "publisher": "USDA/HHS",
+    "year": 2020,
+    "sourceUrl": "https://www.dietaryguidelines.gov/sites/default/files/2020-12/Dietary_Guidelines_for_Americans_2020-2025.pdf",
+    "retrievalDate": "2026-10-01",
+    "filename": "us-dietary-guidelines-2020.txt",
+    "category": "nutrition"
+  },
+  {
+    "id": "who-five-keys",
+    "title": "WHO Five Keys to Safer Food Manual",
+    "publisher": "WHO",
+    "year": 2006,
+    "sourceUrl": "https://iris.who.int/handle/10665/43546",
+    "retrievalDate": "2026-10-01",
+    "filename": "who-five-keys.txt",
+    "category": "food_safety"
+  },
+  {
+    "id": "fda-safe-food-handling",
+    "title": "FDA Safe Food Handling Guide",
+    "publisher": "FDA",
+    "year": 2023,
+    "sourceUrl": "https://www.fda.gov/food/buy-store-serve-safe-food/safe-food-handling",
+    "retrievalDate": "2026-10-01",
+    "filename": "fda-safe-food-handling.txt",
+    "category": "food_safety"
+  },
+  {
+    "id": "uk-eatwell-guide",
+    "title": "The Eatwell Guide",
+    "publisher": "Public Health England",
+    "year": 2016,
+    "sourceUrl": "https://www.gov.uk/government/publications/the-eatwell-guide",
+    "retrievalDate": "2026-10-01",
+    "filename": "uk-eatwell-guide.txt",
+    "category": "nutrition"
+  },
+  {
+    "id": "aus-dietary-guidelines",
+    "title": "Australian Dietary Guidelines",
+    "publisher": "NHMRC",
+    "year": 2013,
+    "sourceUrl": "https://www.eatforhealth.gov.au/guidelines",
+    "retrievalDate": "2026-10-01",
+    "filename": "aus-dietary-guidelines.txt",
+    "category": "nutrition"
+  },
+  {
+    "id": "can-food-guide",
+    "title": "Canada's Food Guide",
+    "publisher": "Health Canada",
+    "year": 2019,
+    "sourceUrl": "https://food-guide.canada.ca/en/",
+    "retrievalDate": "2026-10-01",
+    "filename": "can-food-guide.txt",
+    "category": "nutrition"
+  },
+  {
+    "id": "efsa-drv",
+    "title": "EFSA Dietary Reference Values",
+    "publisher": "EFSA",
+    "year": 2017,
+    "sourceUrl": "https://www.efsa.europa.eu/en/topics/topic/dietary-reference-values",
+    "retrievalDate": "2026-10-01",
+    "filename": "efsa-drv.txt",
+    "category": "nutrition"
+  },
+  {
+    "id": "who-healthy-diet",
+    "title": "WHO Healthy Diet Fact Sheet",
+    "publisher": "WHO",
+    "year": 2020,
+    "sourceUrl": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+    "retrievalDate": "2026-10-01",
+    "filename": "who-healthy-diet.txt",
+    "category": "nutrition"
+  },
+  {
+    "id": "cdc-food-safety",
+    "title": "CDC Food Safety Resources",
+    "publisher": "CDC",
+    "year": 2023,
+    "sourceUrl": "https://www.cdc.gov/foodsafety/",
+    "retrievalDate": "2026-10-01",
+    "filename": "cdc-food-safety.txt",
+    "category": "food_safety"
+  },
+  {
+    "id": "usda-safe-temp-chart",
+    "title": "USDA Safe Minimum Internal Temperature Chart",
+    "publisher": "USDA",
+    "year": 2020,
+    "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart",
+    "retrievalDate": "2026-10-01",
+    "filename": "usda-safe-temp-chart.txt",
+    "category": "cooking"
+  },
+  {
+    "id": "nz-eating-guidelines",
+    "title": "New Zealand Eating and Activity Guidelines",
+    "publisher": "Ministry of Health NZ",
+    "year": 2020,
+    "sourceUrl": "https://www.health.govt.nz/publication/eating-and-activity-guidelines-new-zealand-adults",
+    "retrievalDate": "2026-10-01",
+    "filename": "nz-eating-guidelines.txt",
+    "category": "nutrition"
+  },
+  {
+    "id": "fao-dietary-guidelines",
+    "title": "FAO Food-Based Dietary Guidelines Database",
+    "publisher": "FAO",
+    "year": 2023,
+    "sourceUrl": "https://www.fao.org/nutrition/education/food-dietary-guidelines/en/",
+    "retrievalDate": "2026-10-01",
+    "filename": "fao-dietary-guidelines.txt",
+    "category": "nutrition"
+  },
+  {
+    "id": "us-cold-food-storage",
+    "title": "U.S. FoodSafety.gov - Cold Food Storage Chart",
+    "publisher": "HHS",
+    "year": 2023,
+    "sourceUrl": "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts",
+    "retrievalDate": "2026-10-01",
+    "filename": "us-cold-food-storage.txt",
+    "category": "food_safety"
+  },
+  {
+    "id": "ireland-safe-food",
+    "title": "Irish Food Safety Authority - Safe Food To Go",
+    "publisher": "FSAI",
+    "year": 2021,
+    "sourceUrl": "https://www.fsai.ie/publications/safe-food-to-go",
+    "retrievalDate": "2026-10-01",
+    "filename": "ireland-safe-food.txt",
+    "category": "food_safety"
+  },
+  {
+    "id": "japan-food-guide",
+    "title": "Japan Food Guide Spinning Top",
+    "publisher": "MHLW",
+    "year": 2005,
+    "sourceUrl": "https://www.mhlw.go.jp/bunya/kenkou/pdf/eiyou-syokuji5.pdf",
+    "retrievalDate": "2026-10-01",
+    "filename": "japan-food-guide.txt",
+    "category": "nutrition"
+  },
+  {
+    "id": "india-dietary-guidelines",
+    "title": "Dietary Guidelines for Indians",
+    "publisher": "NIN",
+    "year": 2011,
+    "sourceUrl": "https://www.nin.res.in/downloads/DietaryGuidelinesforNINwebsite.pdf",
+    "retrievalDate": "2026-10-01",
+    "filename": "india-dietary-guidelines.txt",
+    "category": "nutrition"
+  },
+  {
+    "id": "brazil-dietary-guidelines",
+    "title": "Dietary Guidelines for the Brazilian Population",
+    "publisher": "Ministry of Health Brazil",
+    "year": 2014,
+    "sourceUrl": "https://bvsms.saude.gov.br/bvs/publicacoes/dietary_guidelines_brazilian_population.pdf",
+    "retrievalDate": "2026-10-01",
+    "filename": "brazil-dietary-guidelines.txt",
+    "category": "nutrition"
+  },
+  {
+    "id": "nordic-nutrition-recommendations",
+    "title": "Nordic Nutrition Recommendations (NNR)",
+    "publisher": "Nordic Council of Ministers",
+    "year": 2023,
+    "sourceUrl": "https://pub.norden.org/nord2023-003/",
+    "retrievalDate": "2026-10-01",
+    "filename": "nordic-nutrition-recommendations.txt",
+    "category": "nutrition"
+  },
+  {
+    "id": "singapore-healthy-plate",
+    "title": "Singapore Health Promotion Board - My Healthy Plate",
+    "publisher": "HPB",
+    "year": 2020,
+    "sourceUrl": "https://www.healthhub.sg/programmes/55/my-healthy-plate",
+    "retrievalDate": "2026-10-01",
+    "filename": "singapore-healthy-plate.txt",
+    "category": "nutrition"
+  },
+  {
+    "id": "usda-leftovers-safety",
+    "title": "USDA FSIS - Leftovers and Food Safety",
+    "publisher": "USDA",
+    "year": 2020,
+    "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety",
+    "retrievalDate": "2026-10-01",
+    "filename": "usda-leftovers-safety.txt",
+    "category": "food_safety"
+  },
+  {
+    "id": "fda-kitchen-safety",
+    "title": "FDA - Food Safety in Your Kitchen",
+    "publisher": "FDA",
+    "year": 2023,
+    "sourceUrl": "https://www.fda.gov/food/buy-store-serve-safe-food/food-safety-your-kitchen",
+    "retrievalDate": "2026-10-01",
+    "filename": "fda-kitchen-safety.txt",
+    "category": "food_safety"
+  },
+  {
+    "id": "who-infant-formula",
+    "title": "Safe preparation, storage and handling of powdered infant formula",
+    "publisher": "WHO",
+    "year": 2007,
+    "sourceUrl": "https://www.who.int/publications/i/item/9789241595414",
+    "retrievalDate": "2026-10-01",
+    "filename": "who-infant-formula.txt",
+    "category": "food_safety"
+  }
+]
