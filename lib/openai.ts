@@ -47,7 +47,7 @@ ${c.content}`
   };
 
   const response = await openai.chat.completions.parse({
-    model: "llama3-70b-8192",
+    model: "openai/gpt-oss-120b",
     messages: [systemMessage, ...messages],
     response_format: zodResponseFormat(ChatResponseSchema, "chat_response"),
     temperature: 0,
