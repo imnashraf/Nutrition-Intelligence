@@ -1,3 +1,5 @@
+import * as dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
 import { Pool } from 'pg';
 import * as fs from 'fs';
 import * as path from 'path';

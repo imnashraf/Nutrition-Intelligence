@@ -69,17 +69,31 @@ export async function getChatCompletion(
 ): Promise<ChatResponse> {
   let chunksText = "";
   if (chunks && chunks.length > 0) {
-    chunksText = chunks
-      .map(
-        (c, i) => `--- Chunk ${i + 1} ---
+    const MAX_CHARS = 16000;
+    let currentChars = 0;
+    const includedChunks: string[] = [];
+
+    for (const c of chunks) {
+      const chunkStr = `--- Chunk ${includedChunks.length + 1} ---
 Document: ${c.documentTitle}
 Publisher: ${c.publisher}
 Year: ${c.year}
 Section: ${c.sectionHeading}
 ${c.url ? `URL: ${c.url}\n` : ""}
-${c.content}`
-      )
-      .join("\n\n");
+${c.content}`;
+
+      if (currentChars + chunkStr.length > MAX_CHARS && includedChunks.length > 0) {
+        break;
+      }
+      includedChunks.push(chunkStr);
+      currentChars += chunkStr.length;
+    }
+    
+    // Estimate tokens as chars / 4
+    const estimatedTokens = Math.floor(currentChars / 4);
+    console.log(`QUERY_STATS: retrieved=${chunks.length}, sent=${includedChunks.length}, estimatedTokens=${estimatedTokens}`);
+    
+    chunksText = includedChunks.join("\n\n");
   }
 
   const systemMessage: Message = {

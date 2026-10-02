@@ -7,10 +7,10 @@ export type CorpusResult =
 const NOT_IN_CORPUS_MESSAGE =
   "The dietary guidance documents I have access to don't cover this topic.";
 
-const SIMILARITY_THRESHOLD = 0.72;
-const BARELY_RELEVANT_TOP = 0.75;
-const BARELY_RELEVANT_NEXT = 0.70;
-const HIGH_SCORE_THRESHOLD = 0.78;
+const SIMILARITY_THRESHOLD = 0.45;
+const BARELY_RELEVANT_TOP = 0.50;
+const BARELY_RELEVANT_NEXT = 0.45;
+const HIGH_SCORE_THRESHOLD = 0.55;
 
 export function checkRetrievalRelevance(
   query: string,

@@ -84,8 +84,11 @@ export async function POST(req: Request) {
   } catch (error: any) {
     console.error("API /chat error:", error);
     return NextResponse.json(
-      { error: "Model response did not match expected schema", details: error.message },
-      { status: 500 }
-    );
-  }
+  {
+    error: "Failed to generate response",
+    details: error.message,
+  },
+  { status: 500 }
+);
+}
 }

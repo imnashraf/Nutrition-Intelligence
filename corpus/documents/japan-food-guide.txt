@@ -1,21 +1,11 @@
-# Japan Food Guide Spinning Top
-
-Publisher: MHLW
-Year: 2005
-Category: nutrition
-
-## 1. Introduction
-
-This is a generated document for Japan Food Guide Spinning Top. It provides essential guidance regarding nutrition.
-Nutrition and food safety are extremely important.
-
-## 2. Main Guidelines
-
-- Always ensure proper food handling and storage.
-- Store raw chicken at 4°C (40°F) or below.
-- Eat a balanced diet with plenty of fruits and vegetables.
-
-## 3. Storage and Safety
-
-When storing food, keep raw meats separate from ready-to-eat foods to prevent cross-contamination.
-Leftovers should be refrigerated within two hours of cooking.
+Japanese Food Guide Spinning Top
+Do you have a well-balanced diet?
+Physical Activity
+water or teas
+Decided by  Ministry of Health, Labour and Welfare and
+Ministry of Agriculture, Forestry and Fisheries. (Rice,Bread,Noodles,and Pasta)
+(Milk and Milk products)
+※　SV is an abbreviation of “Serving”, which  is a simply countable number 
+   describing the approximated amount of each dish or food served to
+   one personEnjoy Snacks,Confection and 
+Beverages moderately! 

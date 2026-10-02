@@ -1,3 +1,5 @@
+import { config } from 'dotenv';
+config({ path: '.env.local' });
 import { Pinecone } from '@pinecone-database/pinecone';
 
 async function main() {
@@ -15,9 +17,11 @@ async function main() {
   const exists = indexes?.some(idx => idx.name === indexName);
   
   if (exists) {
-    console.log(`🗑️ Deleting existing index "${indexName}"...`);
-    await pc.deleteIndex(indexName);
-    console.log(`✅ Index "${indexName}" deleted.`);
+    console.log(`🧹 Clearing existing index "${indexName}" vectors...`);
+    const index = pc.index(indexName);
+    await index.deleteAll();
+    console.log(`✅ Index "${indexName}" cleared.`);
+    return;
   }
 
   console.log(`⏳ Creating index "${indexName}"... This may take a moment.`);

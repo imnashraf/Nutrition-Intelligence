@@ -1,21 +1,39 @@
-# WHO Five Keys to Safer Food Manual
+WHO Five Keys to Safer Food Manual
 
-Publisher: WHO
-Year: 2006
-Category: food_safety
+Introduction
+Foodborne illnesses are a widespread and growing public health problem, both in developed and developing countries. The World Health Organization (WHO) has developed the Five Keys to Safer Food manual to educate safe food handling behaviors to all consumers and food handlers.
 
-## 1. Introduction
+Key 1: Keep clean
+* Wash your hands before handling food and often during food preparation.
+* Wash your hands after going to the toilet.
+* Wash and sanitize all surfaces and equipment used for food preparation.
+* Protect kitchen areas and food from insects, pests and other animals.
+Why? While most microorganisms do not cause disease, dangerous microorganisms are widely found in soil, water, animals and people. These microorganisms are carried on hands, wiping cloths and utensils, especially cutting boards, and the slightest contact can transfer them to food and cause foodborne diseases.
 
-This is a generated document for WHO Five Keys to Safer Food Manual. It provides essential guidance regarding food_safety.
-Nutrition and food safety are extremely important.
+Key 2: Separate raw and cooked
+* Separate raw meat, poultry and seafood from other foods.
+* Use separate equipment and utensils such as knives and cutting boards for handling raw foods.
+* Store food in containers to avoid contact between raw and prepared foods.
+Why? Raw food, especially meat, poultry and seafood, and their juices, can contain dangerous microorganisms which may be transferred onto other foods during food preparation and storage.
 
-## 2. Main Guidelines
+Key 3: Cook thoroughly
+* Cook food thoroughly, especially meat, poultry, eggs and seafood.
+* Bring foods like soups and stews to boiling to make sure that they have reached 70°C. For meat and poultry, make sure that juices are clear, not pink. Ideally, use a thermometer.
+* Reheat cooked food thoroughly.
+Why? Proper cooking kills almost all dangerous microorganisms. Studies have shown that cooking food to a temperature of 70°C can help ensure it is safe for consumption. Foods that require special attention include minced meats, rolled roasts, large joints of meat and whole poultry.
 
-- Always ensure proper food handling and storage.
-- Store raw chicken at 4°C (40°F) or below.
-- Eat a balanced diet with plenty of fruits and vegetables.
+Key 4: Keep food at safe temperatures
+* Do not leave cooked food at room temperature for more than 2 hours.
+* Refrigerate promptly all cooked and perishable food (preferably below 5°C).
+* Keep cooked food piping hot (more than 60°C) prior to serving.
+* Do not store food too long even in the refrigerator.
+* Do not thaw frozen food at room temperature.
+Why? Microorganisms can multiply very quickly if food is stored at room temperature. By holding at temperatures below 5°C or above 60°C, the growth of microorganisms is slowed down or stopped. Some dangerous microorganisms still grow below 5°C.
 
-## 3. Storage and Safety
-
-When storing food, keep raw meats separate from ready-to-eat foods to prevent cross-contamination.
-Leftovers should be refrigerated within two hours of cooking.
+Key 5: Use safe water and raw materials
+* Use safe water or treat it to make it safe.
+* Select fresh and wholesome foods.
+* Choose foods processed for safety, such as pasteurized milk.
+* Wash fruits and vegetables, especially if eaten raw.
+* Do not use food beyond its expiry date.
+Why? Raw materials, including water and ice, may be contaminated with dangerous microorganisms and chemicals. Toxic chemicals may be formed in damaged and mouldy foods. Care in selection of raw materials and simple measures such as washing and peeling may reduce the risk.

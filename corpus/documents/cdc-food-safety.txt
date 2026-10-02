@@ -1,21 +1,396 @@
-# CDC Food Safety Resources
 
-Publisher: CDC
-Year: 2023
-Category: food_safety
+[Skip directly to site content](https://www.cdc.gov/foodsafety/#content)
+[Skip directly to search](https://www.cdc.gov/foodsafety/#cdc-search__input)
+[Here's how you know](https://www.cdc.gov/foodsafety/#gov-notice)
+A .gov website belongs to an official government organization in the United States.
+A lock ( ) or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.
+[Food Safety](https://www.cdc.gov/food-safety/index.html)
+[For Everyone](https://www.cdc.gov/food-safety/index.html)
+- 
+							[Basics](https://www.cdc.gov/food-safety/about/index.html)
 
-## 1. Introduction
+- 
+							[Symptoms](https://www.cdc.gov/food-safety/signs-symptoms/index.html)
 
-This is a generated document for CDC Food Safety Resources. It provides essential guidance regarding food_safety.
-Nutrition and food safety are extremely important.
+- 
+							[Risk Factors](https://www.cdc.gov/food-safety/risk-factors/index.html)
 
-## 2. Main Guidelines
+- 
+							[Preventing Food Poisoning](https://www.cdc.gov/food-safety/prevention/index.html)
 
-- Always ensure proper food handling and storage.
-- Store raw chicken at 4°C (40°F) or below.
-- Eat a balanced diet with plenty of fruits and vegetables.
+- 
+							[Facts and Stats](https://www.cdc.gov/food-safety/data-research/facts-stats/index.html)
 
-## 3. Storage and Safety
+- 
+							[Educational Materials and Videos](https://www.cdc.gov/food-safety/communication-resources/index.html)
 
-When storing food, keep raw meats separate from ready-to-eat foods to prevent cross-contamination.
-Leftovers should be refrigerated within two hours of cooking.
+- 
+							[Patient Stories](https://www.cdc.gov/food-safety/stories/index.html)
+
+- 
+							[View all](https://www.cdc.gov/food-safety/site.html#gen)
+
+[Basics](https://www.cdc.gov/food-safety/about/index.html)
+[Symptoms](https://www.cdc.gov/food-safety/signs-symptoms/index.html)
+[Risk Factors](https://www.cdc.gov/food-safety/risk-factors/index.html)
+[Preventing Food Poisoning](https://www.cdc.gov/food-safety/prevention/index.html)
+[Facts and Stats](https://www.cdc.gov/food-safety/data-research/facts-stats/index.html)
+[Educational Materials and Videos](https://www.cdc.gov/food-safety/communication-resources/index.html)
+[Patient Stories](https://www.cdc.gov/food-safety/stories/index.html)
+[View all](https://www.cdc.gov/food-safety/site.html#gen)
+[Health Care Providers](https://www.cdc.gov/food-safety/site.html#hcp)
+- 
+							[Clinical Overview](https://www.cdc.gov/food-safety/hcp/clinical-overview/index.html)
+
+- 
+							[View all](https://www.cdc.gov/food-safety/site.html#hcp)
+
+[Clinical Overview](https://www.cdc.gov/food-safety/hcp/clinical-overview/index.html)
+[View all](https://www.cdc.gov/food-safety/site.html#hcp)
+[Public Health](https://www.cdc.gov/food-safety/site.html#php)
+- 
+							[Foodborne Illness Burden](https://www.cdc.gov/food-safety/php/data-research/foodborne-illness-burden/index.html)
+
+- 
+							[Foodborne Illness Sources](https://www.cdc.gov/food-safety/php/data-research/foodborne-illness-sources/index.html)
+
+- 
+							[View all](https://www.cdc.gov/food-safety/site.html#php)
+
+[Foodborne Illness Burden](https://www.cdc.gov/food-safety/php/data-research/foodborne-illness-burden/index.html)
+[Foodborne Illness Sources](https://www.cdc.gov/food-safety/php/data-research/foodborne-illness-sources/index.html)
+[View all](https://www.cdc.gov/food-safety/site.html#php)
+Related Topics:
+[Restaurant Food Safety](https://www.cdc.gov/restaurant-food-safety/about/index.html)
+[About Norovirus](https://www.cdc.gov/norovirus/about/index.html)
+[Foodborne outbreaks](https://www.cdc.gov/foodborne-outbreaks/index.html)
+[Home](https://www.cdc.gov/food-safety/index.html)
+[search](https://www.cdc.gov/foodsafety/)
+[Food Safety](https://www.cdc.gov/food-safety/index.html)
+- 
+												[Basics](https://www.cdc.gov/food-safety/about/index.html)
+
+- 
+												[Symptoms](https://www.cdc.gov/food-safety/signs-symptoms/index.html)
+
+- 
+												[Risk Factors](https://www.cdc.gov/food-safety/risk-factors/index.html)
+
+- 
+												[Preventing Food Poisoning](https://www.cdc.gov/food-safety/prevention/index.html)
+
+- 
+												[Facts and Stats](https://www.cdc.gov/food-safety/data-research/facts-stats/index.html)
+
+- 
+												[Educational Materials and Videos](https://www.cdc.gov/food-safety/communication-resources/index.html)
+
+- 
+												[Patient Stories](https://www.cdc.gov/food-safety/stories/index.html)
+
+- 
+
+												[View All](https://www.cdc.gov/food-safety/site.html#gen)
+
+
+												[Home](https://www.cdc.gov/food-safety/index.html)
+
+
+[Basics](https://www.cdc.gov/food-safety/about/index.html)
+[Symptoms](https://www.cdc.gov/food-safety/signs-symptoms/index.html)
+[Risk Factors](https://www.cdc.gov/food-safety/risk-factors/index.html)
+[Preventing Food Poisoning](https://www.cdc.gov/food-safety/prevention/index.html)
+[Facts and Stats](https://www.cdc.gov/food-safety/data-research/facts-stats/index.html)
+
+[Educational Materials and Videos](https://www.cdc.gov/food-safety/communication-resources/index.html)
+[Patient Stories](https://www.cdc.gov/food-safety/stories/index.html)
+[View All](https://www.cdc.gov/food-safety/site.html#gen)
+[Home](https://www.cdc.gov/food-safety/index.html)
+- 
+												[Clinical Overview](https://www.cdc.gov/food-safety/hcp/clinical-overview/index.html)
+
+- 
+
+												[View All](https://www.cdc.gov/food-safety/site.html#hcp)
+
+
+[Clinical Overview](https://www.cdc.gov/food-safety/hcp/clinical-overview/index.html)
+[View All](https://www.cdc.gov/food-safety/site.html#hcp)
+- 
+												[Foodborne Illness Burden](https://www.cdc.gov/food-safety/php/data-research/foodborne-illness-burden/index.html)
+
+- 
+												[Foodborne Illness Sources](https://www.cdc.gov/food-safety/php/data-research/foodborne-illness-sources/index.html)
+
+- 
+
+												[View All](https://www.cdc.gov/food-safety/site.html#php)
+
+
+[Foodborne Illness Burden](https://www.cdc.gov/food-safety/php/data-research/foodborne-illness-burden/index.html)
+[Foodborne Illness Sources](https://www.cdc.gov/food-safety/php/data-research/foodborne-illness-sources/index.html)
+[View All](https://www.cdc.gov/food-safety/site.html#php)
+- 
+										[Restaurant Food Safety](https://www.cdc.gov/restaurant-food-safety/about/index.html)
+
+- 
+										[About Norovirus](https://www.cdc.gov/norovirus/about/index.html)
+
+- 
+										[Foodborne outbreaks](https://www.cdc.gov/foodborne-outbreaks/index.html)
+
+[Restaurant Food Safety](https://www.cdc.gov/restaurant-food-safety/about/index.html)
+[About Norovirus](https://www.cdc.gov/norovirus/about/index.html)
+[Foodborne outbreaks](https://www.cdc.gov/foodborne-outbreaks/index.html)
+[Food Safety](https://www.cdc.gov/food-safety/index.html)
+[Basics](https://www.cdc.gov/food-safety/about/index.html)
+[Symptoms](https://www.cdc.gov/food-safety/signs-symptoms/index.html)
+[Risk Factors](https://www.cdc.gov/food-safety/risk-factors/index.html)
+[Preventing Food Poisoning](https://www.cdc.gov/food-safety/prevention/index.html)
+[Facts and Stats](https://www.cdc.gov/food-safety/data-research/facts-stats/index.html)
+[Educational Materials and Videos](https://www.cdc.gov/food-safety/communication-resources/index.html)
+[Patient Stories](https://www.cdc.gov/food-safety/stories/index.html)
+[View Menu](https://www.cdc.gov/foodsafety/)
+
+[Preventing Food Poisoning](https://www.cdc.gov/food-safety/prevention/index.html)
+[Learn More](https://www.cdc.gov/food-safety/prevention/index.html)
+[Basics](https://www.cdc.gov/food-safety/about/index.html)
+[Symptoms](https://www.cdc.gov/food-safety/signs-symptoms/index.html)
+
+## For people at increased risk
+[Risk Factors](https://www.cdc.gov/food-safety/risk-factors/index.html)
+[Safer Food for Children Under 5 Years Old](https://www.cdc.gov/food-safety/foods/children-under-5.html)
+- [Safer Food for Pregnant Women](https://www.cdc.gov/food-safety/foods/pregnant-women.html)
+Pregnant women are more likely to get sick from certain germs spread through food, like Listeria.
+
+
+- [Safer Food for Adults 65 Years and Older](https://www.cdc.gov/food-safety/foods/adults-65-older.html)
+As people age, their risk of getting food poisoning increases.
+
+
+- [Safer Food for People with Weakened Immune Systems](https://www.cdc.gov/food-safety/foods/weakened-immune-systems.html)
+Having a weakened immune system may make it harder to fight foodborne germs and sickness.
+
+
+[Safer Food for Pregnant Women](https://www.cdc.gov/food-safety/foods/pregnant-women.html)
+[Safer Food for Adults 65 Years and Older](https://www.cdc.gov/food-safety/foods/adults-65-older.html)
+[Safer Food for People with Weakened Immune Systems](https://www.cdc.gov/food-safety/foods/weakened-immune-systems.html)
+
+## More food safety tips
+[Safer Food Choices](https://www.cdc.gov/food-safety/foods/safer-food-choices.html)
+[Chicken and Food Poisoning](https://www.cdc.gov/food-safety/foods/chicken.html)
+[Raw Flour and Dough](https://www.cdc.gov/food-safety/foods/no-raw-dough.html)
+
+## [Food Safety](https://www.cdc.gov/food-safety/index.html)
+[Food Safety](https://www.cdc.gov/food-safety/index.html)
+Food can sometimes contain germs that can make you sick. Food safety refers to practices that can reduce your risk of getting food poisoning.
+[View All](https://www.cdc.gov/food-safety/site.html)
+
+### [For Everyone](https://www.cdc.gov/food-safety/index.html#gen)
+[For Everyone](https://www.cdc.gov/food-safety/index.html#gen)
+- 
+								[Basics](https://www.cdc.gov/food-safety/about/index.html)
+
+- 
+								[Symptoms](https://www.cdc.gov/food-safety/signs-symptoms/index.html)
+
+- 
+								[Risk Factors](https://www.cdc.gov/food-safety/risk-factors/index.html)
+
+- 
+								[Preventing Food Poisoning](https://www.cdc.gov/food-safety/prevention/index.html)
+
+- 
+								[Facts and Stats](https://www.cdc.gov/food-safety/data-research/facts-stats/index.html)
+
+- 
+								[Educational Materials and Videos](https://www.cdc.gov/food-safety/communication-resources/index.html)
+
+- 
+								[Patient Stories](https://www.cdc.gov/food-safety/stories/index.html)
+
+[Basics](https://www.cdc.gov/food-safety/about/index.html)
+[Symptoms](https://www.cdc.gov/food-safety/signs-symptoms/index.html)
+[Risk Factors](https://www.cdc.gov/food-safety/risk-factors/index.html)
+[Preventing Food Poisoning](https://www.cdc.gov/food-safety/prevention/index.html)
+[Facts and Stats](https://www.cdc.gov/food-safety/data-research/facts-stats/index.html)
+[Educational Materials and Videos](https://www.cdc.gov/food-safety/communication-resources/index.html)
+[Patient Stories](https://www.cdc.gov/food-safety/stories/index.html)
+
+### [Health Care Providers](https://www.cdc.gov/food-safety/site.html#hcp)
+[Health Care Providers](https://www.cdc.gov/food-safety/site.html#hcp)
+- 
+											[Clinical Overview](https://www.cdc.gov/food-safety/hcp/clinical-overview/index.html)
+
+[Clinical Overview](https://www.cdc.gov/food-safety/hcp/clinical-overview/index.html)
+
+[Public Health](https://www.cdc.gov/food-safety/site.html#php)
+- 
+											[Foodborne Illness Burden](https://www.cdc.gov/food-safety/php/data-research/foodborne-illness-burden/index.html)
+
+- 
+											[Foodborne Illness Sources](https://www.cdc.gov/food-safety/php/data-research/foodborne-illness-sources/index.html)
+
+[Foodborne Illness Burden](https://www.cdc.gov/food-safety/php/data-research/foodborne-illness-burden/index.html)
+[Foodborne Illness Sources](https://www.cdc.gov/food-safety/php/data-research/foodborne-illness-sources/index.html)
+[Sign up for Email Updates](https://tools.cdc.gov/campaignproxyservice/subscriptions.aspx#featured)
+[Contact Us](https://www.cdc.gov/foodsafety/#contactUs)
+[Contact Us](https://www.cdc.gov/cdc-info/index.html)
+- [Call 800-232-4636](tel:800-232-4636)
+- [Contact CDC](https://www.cdc.gov/cdc-info/index.html)
+[Call 800-232-4636](tel:800-232-4636)
+[Contact CDC](https://www.cdc.gov/cdc-info/index.html)
+[About CDC](https://www.cdc.gov/foodsafety/#aboutCDC)
+[About CDC](https://www.cdc.gov/about/)
+- [Pressroom](https://www.cdc.gov/media/)
+- [Organization](https://www.cdc.gov/about/organization/)
+- [Budget & Funding](https://www.cdc.gov/budget/)
+- [Careers & Jobs](https://jobs.cdc.gov/index.html)
+[Pressroom](https://www.cdc.gov/media/)
+[Organization](https://www.cdc.gov/about/organization/)
+[Budget & Funding](https://www.cdc.gov/budget/)
+[Careers & Jobs](https://jobs.cdc.gov/index.html)
+[Policies](https://www.cdc.gov/foodsafety/#policies)
+- [Accessibility](https://www.cdc.gov/other/accessibility.html)
+- [External Links](https://www.cdc.gov/Other/disclaimer.html#exit-notification)
+- [Privacy](https://www.cdc.gov/other/privacy.html)
+- [Web Policies](https://www.cdc.gov/Other/policies.html)
+[Accessibility](https://www.cdc.gov/other/accessibility.html)
+[External Links](https://www.cdc.gov/Other/disclaimer.html#exit-notification)
+[Privacy](https://www.cdc.gov/other/privacy.html)
+[Web Policies](https://www.cdc.gov/Other/policies.html)
+- [FOIA](https://www.cdc.gov/foia/)
+- [OIG](https://oig.hhs.gov/)
+- [No Fear Act](https://www.cdc.gov/oeeowe/no-fear-act/)
+- [Nondiscrimination](https://www.cdc.gov/other/nondiscrimination.html)
+- [Vulnerability Disclosure Policy](https://www.hhs.gov/vulnerability-disclosure-policy/index.html)
+[FOIA](https://www.cdc.gov/foia/)
+[OIG](https://oig.hhs.gov/)
+[No Fear Act](https://www.cdc.gov/oeeowe/no-fear-act/)
+[Nondiscrimination](https://www.cdc.gov/other/nondiscrimination.html)
+[Vulnerability Disclosure Policy](https://www.hhs.gov/vulnerability-disclosure-policy/index.html)
+[Languages](https://www.cdc.gov/foodsafety/#languages)
+[Languages](https://www.cdc.gov/other/other-languages/index.html)
+- [Español](https://www.cdc.gov/spanish/)
+[Español](https://www.cdc.gov/spanish/)
+[Language Assistance](https://www.cdc.gov/other/language-assistance.html)
+- [Español](https://www.cdc.gov/other/language-assistance.html#Spanish)
+- [繁體中文](https://www.cdc.gov/other/language-assistance.html#Chinese)
+- [Tiếng Việt](https://www.cdc.gov/other/language-assistance.html#Vietnamese)
+- [한국어](https://www.cdc.gov/other/language-assistance.html#Korean)
+[Español](https://www.cdc.gov/other/language-assistance.html#Spanish)
+[繁體中文](https://www.cdc.gov/other/language-assistance.html#Chinese)
+[Tiếng Việt](https://www.cdc.gov/other/language-assistance.html#Vietnamese)
+[한국어](https://www.cdc.gov/other/language-assistance.html#Korean)
+- [Tagalog](https://www.cdc.gov/other/language-assistance.html#Tagalog)
+- [Русский](https://www.cdc.gov/other/language-assistance.html#Russian)
+- [العربية](https://www.cdc.gov/other/language-assistance.html#Arabic)
+- [Kreyòl Ayisyen](https://www.cdc.gov/other/language-assistance.html#Haitian)
+[Tagalog](https://www.cdc.gov/other/language-assistance.html#Tagalog)
+[Русский](https://www.cdc.gov/other/language-assistance.html#Russian)
+[العربية](https://www.cdc.gov/other/language-assistance.html#Arabic)
+[Kreyòl Ayisyen](https://www.cdc.gov/other/language-assistance.html#Haitian)
+- [Français](https://www.cdc.gov/other/language-assistance.html#French)
+- [Polski](https://www.cdc.gov/other/language-assistance.html#Polish)
+- [Português](https://www.cdc.gov/other/language-assistance.html#Portuguese)
+- [Italiano](https://www.cdc.gov/other/language-assistance.html#Italian)
+[Français](https://www.cdc.gov/other/language-assistance.html#French)
+[Polski](https://www.cdc.gov/other/language-assistance.html#Polish)
+
+[Português](https://www.cdc.gov/other/language-assistance.html#Portuguese)
+[Italiano](https://www.cdc.gov/other/language-assistance.html#Italian)
+- [Deutsch](https://www.cdc.gov/other/language-assistance.html#German)
+- [日本語](https://www.cdc.gov/other/language-assistance.html#Japanese)
+- [فارسی](https://www.cdc.gov/other/language-assistance.html#Farsi)
+- [English](https://www.cdc.gov/other/language-assistance.html#English)
+[Deutsch](https://www.cdc.gov/other/language-assistance.html#German)
+[日本語](https://www.cdc.gov/other/language-assistance.html#Japanese)
+[فارسی](https://www.cdc.gov/other/language-assistance.html#Farsi)
+[English](https://www.cdc.gov/other/language-assistance.html#English)
+[Archive](https://www.cdc.gov/foodsafety/#archive)
+- [CDC Archive](https://archive.cdc.gov/)
+- [Public Health Publications](https://stacks.cdc.gov/)
+[CDC Archive](https://archive.cdc.gov/)
+[Public Health Publications](https://stacks.cdc.gov/)
+[Contact Us](https://www.cdc.gov/foodsafety/#mobile-footer-contactUs)
+[Contact Us](https://www.cdc.gov/cdc-info/index.html)
+- [Call 800-232-4636](tel:800-232-4636)
+- [Contact CDC](https://www.cdc.gov/cdc-info/index.html)
+[Call 800-232-4636](tel:800-232-4636)
+[Contact CDC](https://www.cdc.gov/cdc-info/index.html)
+[About CDC](https://www.cdc.gov/foodsafety/#mobile-footer-aboutCDC)
+- [Pressroom](https://www.cdc.gov/media/)
+- [Organization](https://www.cdc.gov/about/organization/)
+- [Budget & Funding](https://www.cdc.gov/budget/)
+- [Careers & Jobs](https://jobs.cdc.gov/index.html)
+- [About CDC](https://www.cdc.gov/about/)
+[Pressroom](https://www.cdc.gov/media/)
+[Organization](https://www.cdc.gov/about/organization/)
+[Budget & Funding](https://www.cdc.gov/budget/)
+[Careers & Jobs](https://jobs.cdc.gov/index.html)
+[About CDC](https://www.cdc.gov/about/)
+[Policies](https://www.cdc.gov/foodsafety/#mobile-footer-policies)
+- [Accessibility](https://www.cdc.gov/other/accessibility.html)
+- [External Links](https://www.cdc.gov/Other/disclaimer.html#exit-notification)
+- [Privacy](https://www.cdc.gov/other/privacy.html)
+- [Web Policies](https://www.cdc.gov/Other/policies.html)
+[Accessibility](https://www.cdc.gov/other/accessibility.html)
+[External Links](https://www.cdc.gov/Other/disclaimer.html#exit-notification)
+[Privacy](https://www.cdc.gov/other/privacy.html)
+[Web Policies](https://www.cdc.gov/Other/policies.html)
+- [FOIA](https://www.cdc.gov/foia/)
+- [OIG](https://oig.hhs.gov/)
+- [No Fear Act](https://www.cdc.gov/oeeowe/no-fear-act/)
+- [Nondiscrimination](https://www.cdc.gov/other/nondiscrimination.html)
+- [Vulnerability Disclosure Policy](https://www.hhs.gov/vulnerability-disclosure-policy/index.html)
+[FOIA](https://www.cdc.gov/foia/)
+[OIG](https://oig.hhs.gov/)
+[No Fear Act](https://www.cdc.gov/oeeowe/no-fear-act/)
+[Nondiscrimination](https://www.cdc.gov/other/nondiscrimination.html)
+[Vulnerability Disclosure Policy](https://www.hhs.gov/vulnerability-disclosure-policy/index.html)
+[Languages](https://www.cdc.gov/foodsafety/#mobile-footer-languages)
+Languages
+- [Español](https://www.cdc.gov/spanish/)
+[Español](https://www.cdc.gov/spanish/)
+Language Assistance
+- [Español](https://www.cdc.gov/other/language-assistance.html#Spanish)
+- [繁體中文](https://www.cdc.gov/other/language-assistance.html#Chinese)
+- [Tiếng Việt](https://www.cdc.gov/other/language-assistance.html#Vietnamese)
+- [한국어](https://www.cdc.gov/other/language-assistance.html#Korean)
+- [Tagalog](https://www.cdc.gov/other/language-assistance.html#Tagalog)
+- [Русский](https://www.cdc.gov/other/language-assistance.html#Russian)
+- [العربية](https://www.cdc.gov/other/language-assistance.html#Arabic)
+- [Kreyòl Ayisyen](https://www.cdc.gov/other/language-assistance.html#Haitian)
+- [Français](https://www.cdc.gov/other/language-assistance.html#French)
+- [Polski](https://www.cdc.gov/other/language-assistance.html#Polish)
+- [Português](https://www.cdc.gov/other/language-assistance.html#Portuguese)
+- [Italiano](https://www.cdc.gov/other/language-assistance.html#Italian)
+- [Deutsch](https://www.cdc.gov/other/language-assistance.html#German)
+- [日本語](https://www.cdc.gov/other/language-assistance.html#Japanese)
+- [فارسی](https://www.cdc.gov/other/language-assistance.html#Farsi)
+- [English](https://www.cdc.gov/other/language-assistance.html#English)
+[Español](https://www.cdc.gov/other/language-assistance.html#Spanish)
+[繁體中文](https://www.cdc.gov/other/language-assistance.html#Chinese)
+
+[Tiếng Việt](https://www.cdc.gov/other/language-assistance.html#Vietnamese)
+[한국어](https://www.cdc.gov/other/language-assistance.html#Korean)
+[Tagalog](https://www.cdc.gov/other/language-assistance.html#Tagalog)
+[Русский](https://www.cdc.gov/other/language-assistance.html#Russian)
+[العربية](https://www.cdc.gov/other/language-assistance.html#Arabic)
+[Kreyòl Ayisyen](https://www.cdc.gov/other/language-assistance.html#Haitian)
+[Français](https://www.cdc.gov/other/language-assistance.html#French)
+[Polski](https://www.cdc.gov/other/language-assistance.html#Polish)
+[Português](https://www.cdc.gov/other/language-assistance.html#Portuguese)
+[Italiano](https://www.cdc.gov/other/language-assistance.html#Italian)
+[Deutsch](https://www.cdc.gov/other/language-assistance.html#German)
+[日本語](https://www.cdc.gov/other/language-assistance.html#Japanese)
+[فارسی](https://www.cdc.gov/other/language-assistance.html#Farsi)
+[English](https://www.cdc.gov/other/language-assistance.html#English)
+[Archive](https://www.cdc.gov/foodsafety/#mobile-footer-archive)
+- [CDC Archive](https://archive.cdc.gov/)
+- [Public Health Publications](https://stacks.cdc.gov/)
+[CDC Archive](https://archive.cdc.gov/)
+[Public Health Publications](https://stacks.cdc.gov/)
+[HHS.gov](https://hhs.gov)
+[USA.gov](https://usa.gov)
+
