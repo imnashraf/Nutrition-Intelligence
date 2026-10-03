@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Corpus generated chunks
 corpus/chunks/
+corpus/documents.placeholder-backup/
+corpus/raw/
+report.json
