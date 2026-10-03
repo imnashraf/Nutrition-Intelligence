@@ -6,7 +6,7 @@ import { routes } from '../../../../lib/nutrition-intelligence/routes';
 export default function ConversationNotFound() {
   return (
     <>
-      <AppHeader variant="home" />
+      <AppHeader variant="app" />
       <main
         style={{
           flexGrow: 1,
@@ -19,11 +19,11 @@ export default function ConversationNotFound() {
           textAlign: 'center',
         }}
       >
-        <h1 style={{ margin: 0, fontSize: 28, fontWeight: 500, letterSpacing: '-0.02em' }}>
+        <h1 style={{ margin: 0, fontFamily: 'var(--ni-font-serif)', fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 400, lineHeight: 1.05, letterSpacing: '-0.02em' }}>
           We couldn’t find that conversation
         </h1>
         <p style={{ margin: 0, fontSize: 15, lineHeight: 1.55, color: 'var(--ni-ink-tertiary)', maxWidth: 420 }}>
-          It may have been deleted. You can find your other conversations in History, or ask something new.
+          It may have been deleted. Ask your question again to get a fresh answer.
         </p>
         <div style={{ display: 'flex', gap: 8, marginTop: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
           <Link
@@ -34,31 +34,14 @@ export default function ConversationNotFound() {
               height: 44,
               padding: '0 18px',
               borderRadius: 999,
-              background: 'var(--ni-accent)',
-              color: 'var(--ni-on-accent)',
+              background: 'var(--ni-forest)',
+              color: 'var(--ni-on-forest-strong)',
               fontSize: 14,
               fontWeight: 500,
               textDecoration: 'none',
             }}
           >
             Ask a question
-          </Link>
-          <Link
-            href={routes.history}
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              height: 44,
-              padding: '0 18px',
-              borderRadius: 999,
-              border: '1px solid var(--ni-line)',
-              background: 'var(--ni-surface)',
-              color: 'var(--ni-ink)',
-              fontSize: 14,
-              textDecoration: 'none',
-            }}
-          >
-            Open history
           </Link>
         </div>
       </main>

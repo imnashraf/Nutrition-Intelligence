@@ -5,69 +5,78 @@
  */
 
 .ni-root {
-  /* Colour — ground & surfaces */
-  --ni-bg: #F4F5F2;
-  --ni-surface: #FFFFFF;
-  --ni-surface-muted: #FAFBF9;
-  --ni-well: #EEF0EC;
-  --ni-hover: #EAECE7;
-  --ni-avatar: #E3E7E2;
+  /* Colour — light ground & surfaces */
+  --ni-bg: #F2F3EE;           /* page */
+  --ni-surface: #FFFFFF;      /* cards */
+  --ni-surface-raised: #FBFBF8; /* composer, side notes, evidence cards */
+  --ni-sand: #E6E9E1;         /* evidence band, caveat well, hover */
+  --ni-hover: #E6E9E1;
 
-  /* Colour — text */
-  --ni-ink: #141A16;
-  --ni-ink-body: #262E29;
-  --ni-ink-strong: #2F3833;
+  /* Colour — text on light */
+  --ni-ink: #0F1E18;
+  --ni-ink-body: #1E2823;
+  --ni-ink-strong: #2C3530;
   --ni-ink-secondary: #3F4842;
   --ni-ink-tertiary: #4F5953;
   --ni-muted: #5C6660;
-  --ni-placeholder: #7A827D;
+  --ni-faint: #7C857F;        /* large numerals, placeholders */
 
   /* Colour — lines */
-  --ni-line: #E1E5E0;
-  --ni-line-soft: #E6E9E4;
-  --ni-line-faint: #F0F2EE;
-  --ni-line-strong: #C9D0CA;
-  --ni-divider: #D9DED8;
+  --ni-line: #DDE1DA;
+  --ni-line-card: #E1E4DD;
+  --ni-line-input: #E6E8E2;
+  --ni-line-strong: #CBD1C9;
+  --ni-bar-off: #C9CFC6;
 
-  /* Colour — accent (spruce) */
-  --ni-accent: #2F5D4E;
+  /* Colour — forest (dark surfaces: hero, short answer, follow-up bar) */
+  --ni-forest: #0F1E18;
+  --ni-on-forest: #EEF1EA;
+  --ni-on-forest-strong: #F4F6F0;
+  --ni-on-forest-muted: #B5C2BA;
+  --ni-on-forest-subtle: #9FB3A8;
+  --ni-on-forest-faint: #8DA196;
+  --ni-on-forest-chip: #C9D4CD;
+  --ni-forest-line: #2E4239;
+  --ni-forest-line-strong: #3A4E44;
+
+  /* Colour — accents */
+  --ni-citrus: #D5E77A;       /* highlight on forest, send buttons */
+  --ni-accent: #2F5D4E;       /* spruce: links, labels, citations on light */
   --ni-accent-hover: #1F4337;
-  --ni-accent-ink: #24493D;
-  --ni-accent-tint: #E6EEE9;
-  --ni-cite-bg: #EDF1EE;
-  --ni-on-accent: #FFFFFF;
+  --ni-accent-tint: #DCE8E1;
 
   /* Colour — food-safety warning (amber) */
   --ni-warn: #8A4F12;
   --ni-warn-ink: #7A440E;
-  --ni-warn-tint: #FBF3E6;
-  --ni-warn-line: #F0DDBF;
+  --ni-warn-tint: #FBEFD9;
 
   /* Typography */
+  --ni-font-serif: var(--font-ni-serif), 'Iowan Old Style', Georgia, serif;
   --ni-font-sans: var(--font-ni-sans), ui-sans-serif, system-ui, sans-serif;
   --ni-font-mono: var(--font-ni-mono), ui-monospace, SFMono-Regular, monospace;
-  --ni-tracking-display: -0.035em;
-  --ni-tracking-title: -0.02em;
-  --ni-tracking-label: 0.08em;
 
   /* Radius */
-  --ni-radius-xs: 5px;   /* citation chip */
-  --ni-radius-md: 12px;  /* notes, wells */
-  --ni-radius-lg: 14px;  /* prompt cards, source list */
-  --ni-radius-xl: 16px;  /* short answer */
-  --ni-radius-2xl: 20px; /* hero composer */
+  --ni-radius-sm: 4px;
+  --ni-radius-md: 14px;   /* side notes, wells */
+  --ni-radius-lg: 16px;   /* popover */
+  --ni-radius-xl: 18px;   /* evidence cards */
+  --ni-radius-2xl: 22px;  /* specimen card */
+  --ni-radius-3xl: 24px;  /* hero composer, short answer */
+  --ni-radius-band: 28px; /* hero + evidence band */
   --ni-radius-pill: 999px;
 
   /* Elevation */
-  --ni-shadow-composer: 0 1px 2px rgba(20, 26, 22, 0.04), 0 12px 32px -12px rgba(20, 26, 22, 0.10);
-  --ni-shadow-composer-dock: 0 1px 2px rgba(20, 26, 22, 0.04), 0 10px 28px -14px rgba(20, 26, 22, 0.14);
-  --ni-shadow-panel: 0 0 0 1px rgba(20, 26, 22, 0.04), 0 24px 64px -24px rgba(20, 26, 22, 0.28);
-  --ni-scrim: rgba(20, 26, 22, 0.24);
+  --ni-shadow-hero-composer: 0 30px 80px -30px rgba(0, 0, 0, 0.6);
+  --ni-shadow-card: 0 1px 2px rgba(15, 30, 24, 0.04), 0 40px 80px -40px rgba(15, 30, 24, 0.25);
+  --ni-shadow-popover: 0 24px 48px -20px rgba(15, 30, 24, 0.55);
+  --ni-shadow-dock: 0 24px 60px -24px rgba(15, 30, 24, 0.55);
+  --ni-shadow-panel: 0 0 0 1px rgba(15, 30, 24, 0.04), 0 24px 64px -24px rgba(15, 30, 24, 0.3);
+  --ni-scrim: rgba(15, 30, 24, 0.32);
 
   /* Layout */
-  --ni-gutter: clamp(16px, 4vw, 48px);
-  --ni-measure: 720px;   /* reading column */
-  --ni-measure-home: 760px;
+  --ni-container: 1240px;
+  --ni-gutter-wide: clamp(20px, 4vw, 56px);
+  --ni-gutter: clamp(16px, 3vw, 40px);
   --ni-header-h: 69px;
 
   /* Motion */
@@ -77,6 +86,8 @@
 
   min-height: 100vh;
   min-height: 100dvh;
+  width: 100%;
+  color-scheme: light; /* keeps inputs light even if the host app sets color-scheme: dark */
   display: flex;
   flex-direction: column;
   background: var(--ni-bg);
@@ -91,6 +102,18 @@
 .ni-root *::before,
 .ni-root *::after {
   box-sizing: border-box;
+}
+
+/*
+ * Host-app guard. Many Next.js starters put `overflow-x: hidden` on html/body,
+ * which silently breaks every `position: sticky` (header, contents rail,
+ * follow-up bar). `clip` hides sideways overflow the same way without
+ * breaking sticky. Applies only to pages that render Nutrition Intelligence.
+ */
+html:has(.ni-root),
+html:has(.ni-root) body {
+  overflow-x: clip;
+  max-width: none;
 }
 
 /* :where() keeps these resets at zero specificity so component styles win */

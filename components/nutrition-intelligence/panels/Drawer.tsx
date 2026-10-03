@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
-import { geistMono, geistSans } from '../fonts';
+import { fontVariables } from '../fonts';
 import styles from './Drawer.module.css';
 
 const FOCUSABLE =
@@ -67,7 +67,7 @@ export function Drawer({ open, onClose, side = 'right', labelledBy, children }: 
   if (!open || typeof document === 'undefined') return null;
 
   return createPortal(
-    <div className={`ni-root ${geistSans.variable} ${geistMono.variable} ${styles.portal}`}>
+    <div className={`ni-root ${fontVariables} ${styles.portal}`}>
       <div className={styles.scrim} onClick={onClose} aria-hidden="true" />
       <div
         ref={panelRef}

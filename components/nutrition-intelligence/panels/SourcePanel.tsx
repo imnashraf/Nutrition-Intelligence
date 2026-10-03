@@ -1,6 +1,7 @@
 'use client';
 
 import type { Source } from '../../../lib/nutrition-intelligence/types';
+import { shortAuthors } from '../conversation/SideNote';
 import { IconClose, IconExternal } from '../icons';
 import { Drawer } from './Drawer';
 import panel from './panel.module.css';
@@ -105,7 +106,7 @@ export function SourcePanel({ open, onClose, sources, activeNumber, onSelect }: 
                       <span className={styles.allText}>
                         <span className={styles.allTitle}>{s.title}</span>
                         <span className={styles.allSub}>
-                          {[s.authors.split(',')[0], s.year].filter(Boolean).join(' · ')}
+                          {[shortAuthors(s.authors), s.year].filter(Boolean).join(' · ')}
                         </span>
                       </span>
                     </button>

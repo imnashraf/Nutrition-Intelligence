@@ -1,25 +1,17 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import './globals.css';
+import { ReactNode } from 'react';
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Nutrition Intelligence | Chat",
-  description: "A RAG-powered nutrition and food safety assistant.",
+export const metadata = {
+  title: 'Nutrition Intelligence',
+  description: 'Evidence-backed nutrition answers grounded in official dietary guidance.',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable}`}>
-      <body>{children}</body>
+    <html lang="en">
+      <body>
+        {children}
+      </body>
     </html>
   );
 }

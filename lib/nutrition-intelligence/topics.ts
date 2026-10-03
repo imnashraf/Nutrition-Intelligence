@@ -8,9 +8,9 @@ export const TOPIC_LABELS: Record<Topic, string> = {
 };
 
 export const TOPIC_OPTIONS: { value: Topic | 'any'; label: string }[] = [
-  { value: 'any', label: 'All topics' },
+  { value: 'any', label: 'Any topic' },
   { value: 'nutrition', label: 'Nutrition' },
-  { value: 'dietary-guidance', label: 'Dietary guidance' },
+  { value: 'dietary-guidance', label: 'Diet' },
   { value: 'food-safety', label: 'Food safety' },
   { value: 'research', label: 'Research' },
 ];

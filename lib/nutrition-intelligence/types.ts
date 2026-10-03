@@ -38,16 +38,29 @@ export interface PracticeItem {
   content: RichText;
 }
 
+export interface KeyNumber {
+  value: string;
+  caption: string;
+  /** The figure the answer recommends; drawn darker than the others. */
+  highlight?: boolean;
+}
+
 export interface Answer {
   topic: Topic;
   /** Omit when the backend has no evidence grade for this answer. */
   evidence?: EvidenceLevel;
+  /** Short note on what the evidence is, e.g. "meta-analysis, guidelines". */
+  evidenceNote?: string;
+  /** Optional "By the numbers" row. `unit` is shown in the row label. */
+  keyNumbers?: { unit: string; items: KeyNumber[] };
   /** One-sentence answer shown in the "Short answer" card. */
   shortAnswer: RichText;
   /** Food-safety answers lead with the action to take ("Do this"). */
   action?: RichText;
   /** Supporting reasoning, one entry per paragraph. */
   body: RichText[];
+  /** Heading above `body`. Defaults to "Why". */
+  bodyTitle?: string;
   practice?: PracticeItem[];
   caveat?: string;
   sources: Source[];
@@ -99,6 +112,13 @@ export type Feedback = 'helpful' | 'not-helpful';
 
 export interface StarterPrompt {
   topic: Topic;
+  /** Category label shown on the home index, e.g. "Nutrition". */
+  label: string;
+  question: string;
+}
+
+/** Short chips under the hero composer ("Try …"). */
+export interface TryPrompt {
   label: string;
   question: string;
 }

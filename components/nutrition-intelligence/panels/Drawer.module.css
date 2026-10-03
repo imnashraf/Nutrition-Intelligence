@@ -21,7 +21,7 @@
   width: min(440px, 100%);
   display: flex;
   flex-direction: column;
-  background: var(--ni-surface);
+  background: var(--ni-bg);
   box-shadow: var(--ni-shadow-panel);
   outline: none;
   overflow: hidden;

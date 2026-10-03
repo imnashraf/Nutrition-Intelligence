@@ -1,8 +1,7 @@
 import { HomeScreen } from '../../components/nutrition-intelligence/home/HomeScreen';
-import { SAMPLE_ACCOUNT_INITIALS, STARTER_PROMPTS } from '../../lib/nutrition-intelligence/mock-data';
+import { STARTER_PROMPTS, TRY_PROMPTS } from '../../lib/nutrition-intelligence/mock-data';
 
-// TODO(api): replace the sample prompts / initials with your own data
-// (e.g. the signed-in user's initials from your auth session).
+// TODO(api): replace the sample prompts with your own.
 export default function HomePage() {
-  return <HomeScreen prompts={STARTER_PROMPTS} accountInitials={SAMPLE_ACCOUNT_INITIALS} />;
+  return <HomeScreen prompts={STARTER_PROMPTS} tryPrompts={TRY_PROMPTS} />;
 }

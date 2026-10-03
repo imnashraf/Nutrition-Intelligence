@@ -4,7 +4,7 @@
   justify-content: space-between;
   gap: 12px;
   padding: 18px 20px 14px 24px;
-  border-bottom: 1px solid var(--ni-line-soft);
+  border-bottom: 1px solid var(--ni-line);
   flex-shrink: 0;
 }
 
@@ -18,16 +18,18 @@
 .eyebrow {
   font-family: var(--ni-font-mono);
   font-size: 11px;
-  letter-spacing: var(--ni-tracking-label);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ni-muted);
 }
 
 .title {
   margin: 0;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: -0.015em;
+  font-family: var(--ni-font-serif);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
 }
 
 .close {
@@ -60,7 +62,7 @@
 .footer {
   flex-shrink: 0;
   padding: 14px 24px 18px;
-  border-top: 1px solid var(--ni-line-soft);
+  border-top: 1px solid var(--ni-line);
 }
 
 .footerLink {
@@ -81,7 +83,7 @@
 .loadingRow {
   height: 64px;
   border-radius: var(--ni-radius-md);
-  background: var(--ni-bg);
+  background: var(--ni-sand);
   animation: pulse 1.4s ease-in-out infinite;
 }
 

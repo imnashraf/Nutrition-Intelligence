@@ -6,11 +6,8 @@ import { routes } from '../../../lib/nutrition-intelligence/routes';
 import type { Conversation, Topic, Turn } from '../../../lib/nutrition-intelligence/types';
 import { AppHeader } from '../AppHeader';
 import { Composer } from '../Composer';
-import { IconRetry } from '../icons';
 import { SourcePanel } from '../panels/SourcePanel';
-import { AnswerSkeleton } from './AnswerSkeleton';
-import { AnswerView } from './AnswerView';
-import answerStyles from './answer.module.css';
+import { TurnView } from './TurnView';
 import styles from './ConversationScreen.module.css';
 
 interface ConversationScreenProps {
@@ -25,9 +22,9 @@ type SourceState = { turnId: string; number: number } | null;
 /** 02 · Conversation — with loading, error, nutrition and food-safety answer states. */
 export function ConversationScreen({ initialConversation, initialQuestion }: ConversationScreenProps) {
   const [conversationId, setConversationId] = useState<string | undefined>(initialConversation?.id);
-  const [title, setTitle] = useState(initialConversation?.title ?? initialQuestion?.question ?? 'New conversation');
   const [turns, setTurns] = useState<Turn[]>(initialConversation?.turns ?? []);
   const [source, setSource] = useState<SourceState>(null);
+  const [activeSection, setActiveSection] = useState('short');
   const turnRefs = useRef(new Map<string, HTMLElement>());
   const scrollTarget = useRef<string | null>(null);
   const started = useRef(false);
@@ -68,7 +65,6 @@ export function ConversationScreen({ initialConversation, initialQuestion }: Con
   useEffect(() => {
     if (started.current || !initialQuestion) return;
     started.current = true;
-    setTitle(initialQuestion.question);
     void ask(initialQuestion.question, initialQuestion.topic);
   }, [initialQuestion, ask]);
 
@@ -81,58 +77,106 @@ export function ConversationScreen({ initialConversation, initialQuestion }: Con
     scrollTarget.current = null;
   }, [turns]);
 
+  // The contents rail follows the latest answer.
+  const latest = turns[turns.length - 1];
+  const latestAnswer = latest?.status === 'complete' ? latest.answer : undefined;
+  const anchor = (turnId: string) => `ni-${turnId}`;
+
+  const rail = latestAnswer
+    ? [
+        { key: 'short', label: latestAnswer.action ? 'Do this' : 'Short answer' },
+        latestAnswer.keyNumbers && { key: 'numbers', label: 'By the numbers' },
+        latestAnswer.body.length > 0 && { key: 'why', label: 'Why' },
+        (latestAnswer.practice?.length || latestAnswer.caveat) && { key: 'practice', label: 'In practice' },
+        latestAnswer.sources.length > 0 && { key: 'sources', label: 'Sources' },
+      ].filter((x): x is { key: string; label: string } => Boolean(x))
+    : [];
+
+  // Highlight the rail item for the section currently in view.
+  useEffect(() => {
+    if (!latest || !latestAnswer) return;
+    const els = Array.from(
+      document.querySelectorAll<HTMLElement>(`[id^="${anchor(latest.id)}-"][data-section]`),
+    );
+    if (els.length === 0) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible[0]) setActiveSection(visible[0].target.getAttribute('data-section') ?? 'short');
+      },
+      { rootMargin: '-90px 0px -60% 0px' },
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, [latest, latestAnswer]);
+
   const closeSources = useCallback(() => setSource(null), []);
   const activeSources = source ? turns.find((t) => t.id === source.turnId)?.answer?.sources ?? [] : [];
 
   return (
     <>
-      <AppHeader variant="conversation" title={title} activeConversationId={conversationId} />
+      <AppHeader variant="app" />
 
-      <main className={styles.main}>
-        <div className={styles.thread}>
-          {turns.map((turn, index) => {
-            const isLast = index === turns.length - 1;
-            return (
-              <article
-                key={turn.id}
-                className={answerStyles.turn}
-                ref={(el) => {
-                  if (el) turnRefs.current.set(turn.id, el);
-                  else turnRefs.current.delete(turn.id);
-                }}
-              >
-                <section className={answerStyles.question} aria-label="Your question">
-                  <span className={answerStyles.questionLabel}>You asked</span>
-                  <p className={answerStyles.questionText}>{turn.question}</p>
-                </section>
-
-                {turn.status === 'pending' && <AnswerSkeleton />}
-
-                {turn.status === 'error' && (
-                  <div className={answerStyles.error} role="alert">
-                    <p className={answerStyles.errorText}>{turn.error}</p>
-                    <button type="button" className={answerStyles.retry} onClick={() => ask(turn.question, undefined, turn.id)}>
-                      <IconRetry />
-                      Try again
+      <div className={styles.shell}>
+        <aside className={styles.rail} aria-label="On this answer">
+          {rail.length > 0 && (
+            <>
+              <span className={styles.railLabel}>On this answer</span>
+              <nav className={styles.railNav}>
+                {rail.map((item) => (
+                  <a
+                    key={item.key}
+                    href={`#${anchor(latest!.id)}-${item.key}`}
+                    className={styles.railLink}
+                    aria-current={activeSection === item.key ? 'location' : undefined}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </nav>
+            </>
+          )}
+          {turns.length > 1 && (
+            <>
+              <span className={`${styles.railLabel} ${styles.railLabelGap}`}>In this conversation</span>
+              <ol className={styles.railTurns}>
+                {turns.map((t, i) => (
+                  <li key={t.id}>
+                    <button
+                      type="button"
+                      className={styles.railTurn}
+                      onClick={() => turnRefs.current.get(t.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                    >
+                      <span className={styles.railTurnNum}>{String(i + 1).padStart(2, '0')}</span>
+                      <span className={styles.railTurnText}>{t.question}</span>
                     </button>
-                  </div>
-                )}
+                  </li>
+                ))}
+              </ol>
+            </>
+          )}
+        </aside>
 
-                {turn.status === 'complete' && turn.answer && (
-                  <AnswerView
-                    turnId={turn.id}
-                    answer={turn.answer}
-                    onCite={(number) => setSource({ turnId: turn.id, number })}
-                    onFollowUp={(q) => ask(q)}
-                    showFollowUps={isLast}
-                    followUpsDisabled={busy}
-                  />
-                )}
-              </article>
-            );
-          })}
-        </div>
-      </main>
+        <main className={styles.thread}>
+          {turns.map((turn, index) => (
+            <TurnView
+              key={turn.id}
+              ref={(el) => {
+                if (el) turnRefs.current.set(turn.id, el);
+                else turnRefs.current.delete(turn.id);
+              }}
+              turn={turn}
+              anchorPrefix={anchor(turn.id)}
+              isFirst={index === 0}
+              isLast={index === turns.length - 1}
+              busy={busy}
+              onCite={(number) => setSource({ turnId: turn.id, number })}
+              onFollowUp={(q) => ask(q)}
+              onRetry={() => ask(turn.question, undefined, turn.id)}
+            />
+          ))}
+        </main>
+      </div>
 
       <div className={styles.dock}>
         <Composer variant="dock" onSubmit={(q) => ask(q)} busy={busy} />

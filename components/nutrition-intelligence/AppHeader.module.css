@@ -1,31 +1,113 @@
-.header {
+.wordmark {
+  white-space: nowrap;
+  font-family: var(--ni-font-serif);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+/* ---------- Hero header (on forest) ---------- */
+.hero {
+  width: 100%;
+  max-width: var(--ni-container);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 20px var(--ni-gutter);
+  padding: clamp(14px, 2.4vh, 22px) 0;
 }
 
-.header[data-variant='conversation'] {
+.heroBrand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ni-on-forest);
+  text-decoration: none;
+}
+
+.heroBrand:hover {
+  color: var(--ni-on-forest);
+}
+
+.heroBrand .wordmark {
+  font-size: 22px;
+}
+
+.heroMark {
+  color: var(--ni-citrus);
+}
+
+.heroNav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.heroLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 14px;
+  color: var(--ni-on-forest-muted);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color var(--ni-dur-fast) var(--ni-ease);
+}
+
+.heroLink:hover {
+  color: #FFFFFF;
+}
+
+.signIn {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 18px;
+  border: 1px solid var(--ni-forest-line-strong);
+  border-radius: var(--ni-radius-pill);
+  font-size: 14px;
+  color: var(--ni-on-forest);
+  text-decoration: none;
+  transition: border-color var(--ni-dur-fast) var(--ni-ease);
+}
+
+.signIn:hover {
+  color: #FFFFFF;
+  border-color: var(--ni-on-forest-subtle);
+}
+
+.heroAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--ni-forest-line-strong);
+  border-radius: var(--ni-radius-pill);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ni-on-forest);
+  text-decoration: none;
+}
+
+/* ---------- App header (light, sticky) ---------- */
+.app {
   position: sticky;
   top: 0;
   z-index: 20;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  background: rgba(244, 245, 242, 0.88);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--ni-line-soft);
-}
-
-.left {
   display: flex;
   align-items: center;
-  gap: 14px;
-  min-width: 0;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px var(--ni-gutter);
+  background: var(--ni-bg);
+  border-bottom: 1px solid var(--ni-line);
 }
 
-.brand {
+.appBrand {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -35,39 +117,25 @@
   text-decoration: none;
 }
 
-.mark {
+.appBrand:hover {
+  color: var(--ni-ink);
+}
+
+.appBrand .wordmark {
+  font-size: 21px;
+}
+
+.appMark {
   color: var(--ni-accent);
 }
 
-.wordmark {
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-}
-
-.divider {
-  width: 1px;
-  height: 18px;
-  background: var(--ni-divider);
-}
-
-.title {
-  font-size: 14px;
-  color: var(--ni-ink-tertiary);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.nav {
+.appNav {
   display: flex;
   align-items: center;
   gap: 4px;
-  flex-shrink: 0;
 }
 
-.ghost,
-.outline {
+.ghost {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -75,58 +143,57 @@
   min-width: 44px;
   justify-content: center;
   padding: 0 14px;
+  border: 0;
   border-radius: var(--ni-radius-pill);
+  background: transparent;
   font-size: 14px;
-  text-decoration: none;
+  color: var(--ni-ink-secondary);
   cursor: pointer;
   transition: background var(--ni-dur-fast) var(--ni-ease);
-}
-
-.ghost {
-  border: 0;
-  background: transparent;
-  color: var(--ni-ink-secondary);
 }
 
 .ghost:hover {
   background: var(--ni-hover);
 }
 
-.outline {
-  border: 1px solid var(--ni-line);
-  background: var(--ni-surface);
-  color: var(--ni-ink);
-}
-
-.outline:hover {
-  background: var(--ni-hover);
-}
-
-.avatar {
+.primary {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 40px;
+  gap: 8px;
   height: 40px;
+  padding: 0 16px;
   border-radius: var(--ni-radius-pill);
-  background: var(--ni-avatar);
-  color: var(--ni-ink-strong);
-  font-size: 13px;
-  font-weight: 500;
+  background: var(--ni-forest);
+  font-size: 14px;
+  color: var(--ni-on-forest-strong);
   text-decoration: none;
+  transition: background var(--ni-dur-fast) var(--ni-ease);
 }
 
-@media (max-width: 720px) {
-  .wordmark[data-collapse],
-  .divider,
-  .label {
+.primary:hover {
+  color: var(--ni-on-forest-strong);
+  background: #1A2E25;
+}
+
+@media (max-width: 640px) {
+  .hideSm {
     display: none;
   }
 
-  .ghost,
-  .outline {
+  .heroNav {
+    gap: 16px;
+  }
+
+  .heroBrand .wordmark {
+    font-size: 19px;
+  }
+
+  .signIn {
+    padding: 0 14px;
+  }
+
+  .ghost {
     width: 44px;
-    height: 44px;
     padding: 0;
   }
 }

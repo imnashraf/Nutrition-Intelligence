@@ -4,7 +4,7 @@ import { AnswerSkeleton } from '../../../../components/nutrition-intelligence/co
 export default function Loading() {
   return (
     <main style={{ display: 'flex', justifyContent: 'center', padding: 'clamp(96px, 10vw, 128px) var(--ni-gutter) 32px' }}>
-      <div style={{ width: '100%', maxWidth: 'var(--ni-measure)' }}>
+      <div style={{ width: '100%', maxWidth: 680 }}>
         <AnswerSkeleton />
       </div>
     </main>

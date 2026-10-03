@@ -8,14 +8,13 @@ import styles from './HistoryScreen.module.css';
 
 interface HistoryScreenProps {
   conversations: ConversationSummary[];
-  accountInitials?: string;
 }
 
 /** 03 · Conversation history — full page. */
-export function HistoryScreen({ conversations, accountInitials }: HistoryScreenProps) {
+export function HistoryScreen({ conversations }: HistoryScreenProps) {
   return (
     <>
-      <AppHeader variant="home" accountInitials={accountInitials} />
+      <AppHeader variant="app" />
       <main className={styles.main}>
         <div className={styles.column}>
           <div className={styles.head}>

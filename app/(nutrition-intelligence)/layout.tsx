@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { geistMono, geistSans } from '../../components/nutrition-intelligence/fonts';
+import { fontVariables } from '../../components/nutrition-intelligence/fonts';
 import '../../components/nutrition-intelligence/styles/tokens.css';
 
 export const metadata: Metadata = {
@@ -17,5 +17,5 @@ export const metadata: Metadata = {
  * its own <html> and <body>.
  */
 export default function NutritionIntelligenceLayout({ children }: { children: ReactNode }) {
-  return <div className={`ni-root ${geistSans.variable} ${geistMono.variable}`}>{children}</div>;
+  return <div className={`ni-root ${fontVariables}`}>{children}</div>;
 }

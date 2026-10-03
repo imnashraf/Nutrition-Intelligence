@@ -1,37 +1,47 @@
 /* ---------- Hero (home) ---------- */
 .hero {
+  width: 100%;
+  max-width: 760px;
+  margin-top: clamp(24px, 5vh, 48px);
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  background: var(--ni-surface);
-  border: 1px solid var(--ni-line);
-  border-radius: var(--ni-radius-2xl);
-  padding: 20px 20px 14px;
-  box-shadow: var(--ni-shadow-composer);
-  transition: border-color var(--ni-dur-fast) var(--ni-ease);
+  gap: 16px;
+  background: var(--ni-surface-raised);
+  color: var(--ni-ink);
+  border-radius: var(--ni-radius-3xl);
+  padding: 22px 22px 16px;
+  box-shadow: var(--ni-shadow-hero-composer);
+  text-align: left;
 }
 
-.hero:focus-within {
-  border-color: var(--ni-accent);
+.label {
+  font-family: var(--ni-font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ni-muted);
 }
 
-.input {
+.heroInput {
   width: 100%;
+  min-height: 2.6em; /* two lines, as in the design */
   border: 0;
   outline: none;
   resize: none;
   background: transparent;
   padding: 0;
-  font-size: 18px;
-  line-height: 1.5;
+  font-family: var(--ni-font-serif);
+  font-size: 28px;
+  line-height: 1.3;
   color: var(--ni-ink);
 }
 
-.input::placeholder {
-  color: var(--ni-placeholder);
+.heroInput::placeholder {
+  color: var(--ni-faint);
 }
 
-.input:focus-visible {
+.heroInput:focus-visible,
+.dockInput:focus-visible {
   outline: none;
 }
 
@@ -40,69 +50,60 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--ni-line-input);
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-width: 0;
 }
 
 .topic {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.topicIcon,
-.chevron {
-  position: absolute;
-  pointer-events: none;
-  color: var(--ni-ink-secondary);
-}
-
-.topicIcon {
-  left: 12px;
-}
-
-.chevron {
-  right: 12px;
-}
-
-.select {
-  appearance: none;
-  -webkit-appearance: none;
-  height: 36px;
-  padding: 0 32px 0 32px;
-  border: 1px solid var(--ni-line);
+  height: 34px;
+  padding: 0 14px;
+  border: 0;
   border-radius: var(--ni-radius-pill);
-  background: var(--ni-surface);
+  background: transparent;
   font-size: 13px;
   color: var(--ni-ink-secondary);
+  white-space: nowrap;
   cursor: pointer;
-  transition: background var(--ni-dur-fast) var(--ni-ease);
+  transition: background var(--ni-dur-fast) var(--ni-ease), color var(--ni-dur-fast) var(--ni-ease);
 }
 
-.select:hover {
-  background: var(--ni-hover);
+.topic:hover {
+  background: var(--ni-sand);
+}
+
+.topic[aria-pressed='true'] {
+  background: var(--ni-forest);
+  color: var(--ni-on-forest-strong);
 }
 
 .send {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
   border: 0;
   border-radius: var(--ni-radius-pill);
-  background: var(--ni-accent);
-  color: var(--ni-on-accent);
+  background: var(--ni-citrus);
+  color: var(--ni-forest);
   cursor: pointer;
-  transition: background var(--ni-dur-fast) var(--ni-ease), opacity var(--ni-dur-fast) var(--ni-ease);
+  transition: transform var(--ni-dur-fast) var(--ni-ease), opacity var(--ni-dur-fast) var(--ni-ease);
 }
 
 .send:hover:not(:disabled) {
-  background: var(--ni-accent-hover);
+  transform: translateX(1px);
 }
 
 .send:disabled {
   cursor: default;
-  opacity: 0.45;
 }
 
 .send[data-busy] {
@@ -113,8 +114,8 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.35);
-  border-top-color: #fff;
+  border: 2px solid rgba(15, 30, 24, 0.25);
+  border-top-color: var(--ni-forest);
   animation: spin 0.8s linear infinite;
 }
 
@@ -125,37 +126,87 @@
 /* ---------- Dock (conversation follow-up) ---------- */
 .dock {
   width: 100%;
-  max-width: var(--ni-measure);
+  max-width: 760px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  align-items: center;
+  gap: 10px;
 }
 
 .dockBar {
+  width: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 12px;
-  background: var(--ni-surface);
-  border: 1px solid var(--ni-line);
-  border-radius: 18px;
-  padding: 12px 12px 12px 18px;
-  box-shadow: var(--ni-shadow-composer-dock);
-  transition: border-color var(--ni-dur-fast) var(--ni-ease);
+  background: var(--ni-forest);
+  border-radius: 999px;
+  padding: 8px 8px 8px 26px;
+  box-shadow: var(--ni-shadow-dock);
 }
 
 .dockBar:focus-within {
-  border-color: var(--ni-accent);
+  box-shadow: var(--ni-shadow-dock), 0 0 0 2px var(--ni-citrus);
 }
 
-.dock .input {
+.dockInput {
   flex-grow: 1;
-  font-size: 16px; /* 16px stops iOS zoom on focus */
-  padding: 10px 0;
+  border: 0;
+  outline: none;
+  resize: none;
+  background: transparent;
+  padding: 8px 0;
+  font-family: var(--ni-font-serif);
+  font-size: 21px;
+  line-height: 1.4;
+  color: var(--ni-on-forest-strong);
+}
+
+.dockInput::placeholder {
+  color: var(--ni-on-forest-faint);
 }
 
 .note {
   margin: 0;
-  text-align: center;
+  padding: 2px 10px;
+  border-radius: var(--ni-radius-pill);
+  background: var(--ni-bg);
   font-size: 12px;
   color: var(--ni-muted);
+}
+
+/* Short laptop screens: one line, so the whole box sits above the fold */
+@media (max-height: 760px) {
+  .heroInput {
+    min-height: 1.3em;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 18px 16px 14px;
+  }
+
+  .heroInput {
+    font-size: 24px;
+  }
+
+  /* Topic pills scroll sideways instead of wrapping on phones */
+  .topics {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-right: -4px;
+  }
+
+  .topics::-webkit-scrollbar {
+    display: none;
+  }
+
+  .dockBar {
+    padding-left: 20px;
+  }
+
+  .dockInput {
+    font-size: 19px;
+  }
 }

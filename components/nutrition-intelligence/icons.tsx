@@ -24,9 +24,24 @@ function Icon({ size = 16, strokeWidth = 1.6, children, ...rest }: IconProps & {
 
 /** Brand mark: a seed with a stem. */
 export const LogoMark = (p: IconProps) => (
-  <Icon size={22} {...p}>
+  <Icon size={24} strokeWidth={1.5} {...p}>
     <path d="M12 3c5 3 7 7.5 7 11a7 7 0 0 1-14 0c0-3.5 2-8 7-11z" />
     <path d="M12 9v12" />
+    <path d="M12 14l3-2.5" />
+  </Icon>
+);
+
+export const IconArrowRight = (p: IconProps) => (
+  <Icon size={20} strokeWidth={1.8} {...p}>
+    <path d="M5 12h14" />
+    <path d="m13 6 6 6-6 6" />
+  </Icon>
+);
+
+export const IconArrowUpRight = (p: IconProps) => (
+  <Icon size={18} strokeWidth={1.7} {...p}>
+    <path d="M7 17 17 7" />
+    <path d="M8 7h9v9" />
   </Icon>
 );
 

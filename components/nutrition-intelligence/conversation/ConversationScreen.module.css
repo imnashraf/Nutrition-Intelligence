@@ -1,25 +1,128 @@
-.main {
+.shell {
   flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  padding: clamp(32px, 6vw, 64px) var(--ni-gutter) 32px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 56px;
+  padding: clamp(40px, 6vw, 72px) var(--ni-gutter) 40px;
 }
 
-.thread {
-  width: 100%;
-  max-width: var(--ni-measure);
+/* Contents rail */
+.rail {
+  position: sticky;
+  top: 104px;
+  align-self: start;
   display: flex;
   flex-direction: column;
-  gap: 56px;
+  gap: 14px;
 }
 
+.railLabel {
+  font-family: var(--ni-font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ni-muted);
+}
+
+.railLabelGap {
+  margin-top: 24px;
+}
+
+.railNav {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--ni-line);
+}
+
+.railLink {
+  padding: 7px 0 7px 15px;
+  font-size: 14px;
+  color: var(--ni-muted);
+  text-decoration: none;
+  transition: color var(--ni-dur-fast) var(--ni-ease);
+}
+
+.railLink:hover {
+  color: var(--ni-ink);
+}
+
+.railLink[aria-current] {
+  margin-left: -1px;
+  padding-left: 14px;
+  border-left: 2px solid var(--ni-ink);
+  color: var(--ni-ink);
+}
+
+.railTurns {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.railTurn {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 6px;
+  width: 100%;
+  padding: 6px 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.railTurnNum {
+  font-family: var(--ni-font-mono);
+  font-size: 11px;
+  color: var(--ni-faint);
+  padding-top: 2px;
+}
+
+.railTurnText {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--ni-ink-tertiary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.railTurn:hover .railTurnText {
+  color: var(--ni-ink);
+}
+
+/* Thread */
+.thread {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  min-width: 0;
+}
+
+/* Follow-up dock */
 .dock {
   position: sticky;
   bottom: 0;
   z-index: 10;
   display: flex;
   justify-content: center;
-  padding: 16px var(--ni-gutter) 20px;
-  padding-bottom: max(20px, env(safe-area-inset-bottom));
-  background: linear-gradient(to bottom, rgba(244, 245, 242, 0), var(--ni-bg) 30%);
+  padding: 16px var(--ni-gutter) 22px;
+  padding-bottom: max(22px, env(safe-area-inset-bottom));
+}
+
+@media (max-width: 1180px) {
+  .shell {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .rail {
+    display: none;
+  }
 }
