@@ -31,6 +31,39 @@
 | **Retrieval Chunks** | 427 |
 | **Pinecone Vectors** | 427 |
 
+## Try the Demo
+
+Try these questions to explore the application's dietary guidance retrieval, grounding, citations, and out-of-corpus behavior.
+
+### Healthy Diet
+
+- What foods are part of a healthy diet?
+- Why are fruits and vegetables important for a healthy diet?
+- What types of fats should I choose in my diet?
+- How can I reduce my intake of added sugars?
+
+### Food Safety
+
+- How can I keep food safe when preparing meals?
+- What are the five keys to safer food?
+- What temperature should chicken be cooked to?
+- How should I safely store leftovers?
+- How can I prevent cross-contamination when preparing food?
+
+### Dietary Guidelines
+
+- What does the Eatwell Guide recommend for a healthy diet?
+- What does Canada's Food Guide recommend for healthy eating?
+- What does the Australian Dietary Guidelines recommend?
+- What does the Dietary Guidelines for Americans recommend?
+
+### Out-of-Corpus Tests
+
+- What is the capital of France?
+- Who is the current president of the United States?
+
+The final two questions demonstrate the application's behavior when a question is outside the available dietary-guidance corpus, actively refusing to generate an answer rather than hallucinating.
+
 ## Overview
 
 Nutrition Intelligence is a bounded Retrieval-Augmented Generation (RAG) system dedicated exclusively to answering nutrition and food-safety questions. 
