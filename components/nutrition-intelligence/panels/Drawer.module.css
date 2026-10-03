@@ -1,0 +1,69 @@
+.portal {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  min-height: 0;
+  display: block;
+  background: transparent;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: var(--ni-scrim);
+  animation: fade var(--ni-dur) var(--ni-ease);
+}
+
+.panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: min(440px, 100%);
+  display: flex;
+  flex-direction: column;
+  background: var(--ni-surface);
+  box-shadow: var(--ni-shadow-panel);
+  outline: none;
+  overflow: hidden;
+}
+
+.panel[data-side='right'] {
+  right: 0;
+  border-left: 1px solid var(--ni-line);
+  animation: slide-from-right var(--ni-dur) var(--ni-ease);
+}
+
+.panel[data-side='left'] {
+  left: 0;
+  border-right: 1px solid var(--ni-line);
+  animation: slide-from-left var(--ni-dur) var(--ni-ease);
+}
+
+/* Phones: the panel becomes a sheet rising from the bottom */
+@media (max-width: 640px) {
+  .panel[data-side='right'],
+  .panel[data-side='left'] {
+    top: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: min(88dvh, 100%);
+    border: 0;
+    border-top: 1px solid var(--ni-line);
+    border-radius: 20px 20px 0 0;
+    animation: slide-from-bottom var(--ni-dur) var(--ni-ease);
+  }
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+}
+@keyframes slide-from-right {
+  from { transform: translateX(24px); opacity: 0; }
+}
+@keyframes slide-from-left {
+  from { transform: translateX(-24px); opacity: 0; }
+}
+@keyframes slide-from-bottom {
+  from { transform: translateY(32px); opacity: 0; }
+}

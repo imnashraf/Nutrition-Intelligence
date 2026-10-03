@@ -1,0 +1,224 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 0;
+}
+
+/* Search */
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 14px;
+  color: var(--ni-muted);
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px 0 40px;
+  border: 1px solid var(--ni-line);
+  border-radius: var(--ni-radius-pill);
+  background: var(--ni-surface-muted);
+  font-size: 14px;
+  color: var(--ni-ink);
+  outline: none;
+  transition: border-color var(--ni-dur-fast) var(--ni-ease), background var(--ni-dur-fast) var(--ni-ease);
+}
+
+.searchInput::placeholder {
+  color: var(--ni-placeholder);
+}
+
+.searchInput:focus {
+  border-color: var(--ni-line-strong);
+  background: var(--ni-surface);
+}
+
+.searchInput:focus-visible {
+  outline: 2px solid var(--ni-accent);
+  outline-offset: 1px;
+}
+
+/* Groups */
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.groupLabel {
+  margin: 0;
+  padding: 0 12px;
+  font-family: var(--ni-font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: var(--ni-tracking-label);
+  text-transform: uppercase;
+  color: var(--ni-muted);
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  border-radius: var(--ni-radius-md);
+  text-decoration: none;
+  color: var(--ni-ink);
+  transition: background var(--ni-dur-fast) var(--ni-ease);
+}
+
+.item:hover {
+  background: var(--ni-bg);
+}
+
+.item[aria-current='page'] {
+  background: var(--ni-accent-tint);
+}
+
+.itemTop {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.itemTitle {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.itemTime {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: var(--ni-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.itemPreview {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ni-ink-tertiary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.itemTopic {
+  font-family: var(--ni-font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ni-accent);
+  padding-top: 2px;
+}
+
+.itemTopic[data-topic='food-safety'] {
+  color: var(--ni-warn);
+}
+
+/* Page variant: roomier rows with dividers */
+.root[data-variant='page'] .groups {
+  gap: 40px;
+}
+
+.root[data-variant='page'] .groupLabel {
+  padding: 0 0 10px;
+  border-bottom: 1px solid var(--ni-line);
+}
+
+.root[data-variant='page'] .list {
+  gap: 0;
+}
+
+.root[data-variant='page'] .list > li + li {
+  border-top: 1px solid var(--ni-line-soft);
+}
+
+.root[data-variant='page'] .item {
+  padding: 18px 12px;
+  margin: 0 -12px;
+}
+
+.root[data-variant='page'] .itemTitle {
+  font-size: 17px;
+}
+
+.root[data-variant='page'] .itemPreview {
+  font-size: 14px;
+}
+
+/* Empty states */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 32px 12px;
+}
+
+.empty[data-variant='page'] {
+  padding: 48px 0;
+}
+
+.emptyTitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.emptyBody {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ni-ink-tertiary);
+  max-width: 340px;
+}
+
+.emptyAction {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--ni-line);
+  border-radius: var(--ni-radius-pill);
+  background: var(--ni-surface);
+  font-size: 14px;
+  color: var(--ni-ink);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--ni-dur-fast) var(--ni-ease);
+}
+
+.emptyAction:hover {
+  background: var(--ni-hover);
+}

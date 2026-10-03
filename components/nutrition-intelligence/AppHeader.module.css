@@ -1,0 +1,132 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px var(--ni-gutter);
+}
+
+.header[data-variant='conversation'] {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background: rgba(244, 245, 242, 0.88);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--ni-line-soft);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  min-height: 40px;
+  color: var(--ni-ink);
+  text-decoration: none;
+}
+
+.mark {
+  color: var(--ni-accent);
+}
+
+.wordmark {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.divider {
+  width: 1px;
+  height: 18px;
+  background: var(--ni-divider);
+}
+
+.title {
+  font-size: 14px;
+  color: var(--ni-ink-tertiary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.ghost,
+.outline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  min-width: 44px;
+  justify-content: center;
+  padding: 0 14px;
+  border-radius: var(--ni-radius-pill);
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--ni-dur-fast) var(--ni-ease);
+}
+
+.ghost {
+  border: 0;
+  background: transparent;
+  color: var(--ni-ink-secondary);
+}
+
+.ghost:hover {
+  background: var(--ni-hover);
+}
+
+.outline {
+  border: 1px solid var(--ni-line);
+  background: var(--ni-surface);
+  color: var(--ni-ink);
+}
+
+.outline:hover {
+  background: var(--ni-hover);
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--ni-radius-pill);
+  background: var(--ni-avatar);
+  color: var(--ni-ink-strong);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+@media (max-width: 720px) {
+  .wordmark[data-collapse],
+  .divider,
+  .label {
+    display: none;
+  }
+
+  .ghost,
+  .outline {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+  }
+}
