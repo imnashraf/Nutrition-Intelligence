@@ -113,6 +113,9 @@
 html:has(.ni-root),
 html:has(.ni-root) body {
   overflow-x: clip;
+  overflow-y: auto;
+  height: auto;
+  min-height: 100vh;
   max-width: none;
 }
 

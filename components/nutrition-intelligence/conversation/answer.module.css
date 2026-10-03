@@ -26,6 +26,28 @@
   align-items: start;
 }
 
+.answerMain {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  min-width: 0;
+}
+
+.answerSources {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: calc(var(--ni-header-h) + 32px);
+  align-self: start;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  scroll-margin-top: calc(var(--ni-header-h) + 32px);
+}
+
 .kicker {
   font-family: var(--ni-font-mono);
   font-size: 11px;
