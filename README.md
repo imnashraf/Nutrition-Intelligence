@@ -105,31 +105,32 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    subgraph Frontend [Client Browser]
-        HomeScreen
-        ConversationScreen
-        Composer
-        AnswerView
-        SourcePanel
+
+    subgraph Frontend["Client Browser"]
+        HomeScreen["Home Screen"]
+        ConversationScreen["Conversation Screen"]
+        Composer["Composer"]
+        AnswerView["Answer View"]
+        SourcePanel["Source Panel"]
     end
 
-    subgraph Backend [Vercel Serverless]
-        ClientAdapter[lib/nutrition-intelligence/client.ts]
-        API[/api/chat]
-        ScopeGuard[lib/scopeGuard.ts]
-        CorpusGuard[lib/corpusGuard.ts]
-        ContextBuilder[16K Context Builder]
-        Zod[Zod Validation]
+    subgraph Backend["Vercel Serverless"]
+        ClientAdapter["lib/nutrition-intelligence/client.ts"]
+        API["/api/chat"]
+        ScopeGuard["lib/scopeGuard.ts"]
+        CorpusGuard["lib/corpusGuard.ts"]
+        ContextBuilder["16K Context Builder"]
+        Zod["Zod Validation"]
     end
 
-    subgraph Embedding [Local Compute]
-        Xenova[Xenova/all-MiniLM-L6-v2]
+    subgraph Embedding["Local Compute"]
+        Xenova["Xenova/all-MiniLM-L6-v2"]
     end
 
-    subgraph Infrastructure [External Services]
-        Pinecone[(Pinecone Vector DB)]
-        PostgreSQL[(Supabase PostgreSQL)]
-        Groq[Groq Inference Engine]
+    subgraph Infrastructure["External Services"]
+        Pinecone["Pinecone Vector DB"]
+        PostgreSQL["Supabase PostgreSQL"]
+        Groq["Groq Inference Engine"]
     end
 
     Composer --> ClientAdapter
